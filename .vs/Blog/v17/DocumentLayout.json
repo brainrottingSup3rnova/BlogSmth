@@ -1,0 +1,77 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\project\\mappers\\postmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\mappers\\postmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0A786B15-F64A-429B-8446-2B2B875BF07B}|Domain\\Domain.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\domain\\models\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A786B15-F64A-429B-8446-2B2B875BF07B}|Domain\\Domain.csproj|solutionrelative:domain\\models\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\project\\dto\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\dto\\postdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PostMapper.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Mappers\\PostMapper.cs",
+              "RelativeDocumentMoniker": "Project\\Mappers\\PostMapper.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Mappers\\PostMapper.cs",
+              "RelativeToolTip": "Project\\Mappers\\PostMapper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T07:29:40.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PostDto.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Dto\\PostDto.cs",
+              "RelativeDocumentMoniker": "Project\\Dto\\PostDto.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Dto\\PostDto.cs",
+              "RelativeToolTip": "Project\\Dto\\PostDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T07:28:46.332Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Post.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Domain\\Models\\Entities\\Post.cs",
+              "RelativeDocumentMoniker": "Domain\\Models\\Entities\\Post.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Domain\\Models\\Entities\\Post.cs",
+              "RelativeToolTip": "Domain\\Models\\Entities\\Post.cs",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowC0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T07:21:42.946Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
