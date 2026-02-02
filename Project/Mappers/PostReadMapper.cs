@@ -9,13 +9,13 @@ using Domain.Models.Entities;
 
 namespace Application.Mappers
 {
-    public static class PostMapper
+    public static class PostReadMapper
     {
-        public static PostDto ToDto(Post post)
+        public static PostReadDto ToReadDto(this Post post)
         {
             if(post != null)
             {
-                return new PostDto(
+                return new PostReadDto(
                     post.Id,
                     post.Title,
                     post.Content,
@@ -28,7 +28,7 @@ namespace Application.Mappers
             }
         }
 
-        public static Post ToEntity(PostDto postDto)
+        public static Post ToReadEntity(this PostReadDto postDto)
         {
             if(postDto != null)
             {

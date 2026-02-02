@@ -6,10 +6,8 @@ using System.Threading.Tasks;
 
 namespace Application.Dto
 {
-    public record PostDto(
-        Guid Id,
+    public record PostCreateDto(
         string Title,
-        string Content,
-        DateTime CreatedAt
+        string Content
         );
 }

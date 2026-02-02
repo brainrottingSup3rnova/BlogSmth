@@ -56,7 +56,7 @@ namespace Domain.Models.Entities
 
         public Post(string title, string content) : this(Guid.NewGuid(), title, content, DateTime.Now)
         {
-
+            
         }
     }
 }
