@@ -17,7 +17,7 @@ namespace Domain.Models.Entities
         public string Title
         {
             get => _title;
-            private set
+            set
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
@@ -31,7 +31,7 @@ namespace Domain.Models.Entities
         public string Content 
         {
             get => _content;
-            private set
+            set
             {
                 if (string.IsNullOrWhiteSpace(value))
                 {
