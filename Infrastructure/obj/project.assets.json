@@ -41,7 +41,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "Application >= 1.0.0"
+      "Application >= 1.0.0",
+      "Domain >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -77,6 +78,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
+            "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Domain\\Domain.csproj": {
+              "projectPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Domain\\Domain.csproj"
+            },
             "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Application.csproj": {
               "projectPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Application.csproj"
             }
