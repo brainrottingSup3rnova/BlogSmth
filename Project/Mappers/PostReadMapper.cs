@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http.Headers;
 using System.Text;
 using System.Threading.Tasks;
 using Application.Dto;
@@ -13,10 +14,10 @@ namespace Application.Mappers
     {
         public static PostReadDto ToReadDto(this Post post)
         {
-            if(post != null)
+            if (post != null)
             {
                 return new PostReadDto(
-                    post.Id,
+                    post.Id.ToString(),
                     post.Title,
                     post.Content,
                     post.CreatedAt
@@ -33,7 +34,7 @@ namespace Application.Mappers
             if(postDto != null)
             {
                 return new Post(
-                    postDto.Id,
+                    new Guid(postDto.Id),
                     postDto.Title,
                     postDto.Content,
                     postDto.CreatedAt

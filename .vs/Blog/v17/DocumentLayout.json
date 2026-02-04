@@ -1,34 +1,38 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\",
+  "WorkspaceRootPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\project\\usecases\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\usecases\\blog.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella\\blogsmth\\project\\usecases\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\usecases\\blogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\project\\interfaces\\ipostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\interfaces\\ipostrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\project\\mappers\\postreadmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\mappers\\postreadmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\project\\mappers\\postcreatemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella\\blogsmth\\project\\mappers\\postcreatemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\mappers\\postcreatemapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{0A786B15-F64A-429B-8446-2B2B875BF07B}|Domain\\Domain.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\domain\\models\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0A786B15-F64A-429B-8446-2B2B875BF07B}|Domain\\Domain.csproj|solutionrelative:domain\\models\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella\\blogsmth\\project\\mappers\\postreadmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\mappers\\postreadmapper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\project\\dto\\postcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella\\blogsmth\\project\\dto\\postreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\dto\\postreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella\\blogsmth\\project\\interfaces\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\interfaces\\iblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella\\blogsmth\\project\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\interfaces\\iblogservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella\\blogsmth\\project\\dto\\postcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\dto\\postcreatedto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|c:\\users\\anna.tassinari\\desktop\\orsi poolari ma ddove\\blog\\project\\dto\\postreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E5958B6A-B484-4340-A5DD-B164052740B3}|Project\\Application.csproj|solutionrelative:project\\dto\\postreaddto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{0A786B15-F64A-429B-8446-2B2B875BF07B}|Domain\\Domain.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella\\blogsmth\\domain\\models\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0A786B15-F64A-429B-8446-2B2B875BF07B}|Domain\\Domain.csproj|solutionrelative:domain\\models\\entities\\post.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,102 +42,111 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 7,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Blog.cs",
-              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\UseCases\\Blog.cs",
-              "RelativeDocumentMoniker": "Project\\UseCases\\Blog.cs",
-              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\UseCases\\Blog.cs",
-              "RelativeToolTip": "Project\\UseCases\\Blog.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "IBlogService.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Interfaces\\IBlogService.cs",
+              "RelativeDocumentMoniker": "Project\\Interfaces\\IBlogService.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Interfaces\\IBlogService.cs",
+              "RelativeToolTip": "Project\\Interfaces\\IBlogService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T07:57:48.136Z",
+              "WhenOpened": "2026-02-04T07:19:32.788Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "IPostRepository.cs",
-              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Interfaces\\IPostRepository.cs",
-              "RelativeDocumentMoniker": "Project\\Interfaces\\IPostRepository.cs",
-              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Interfaces\\IPostRepository.cs",
-              "RelativeToolTip": "Project\\Interfaces\\IPostRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAApAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "IBlogRepository.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Interfaces\\IBlogRepository.cs",
+              "RelativeDocumentMoniker": "Project\\Interfaces\\IBlogRepository.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Interfaces\\IBlogRepository.cs",
+              "RelativeToolTip": "Project\\Interfaces\\IBlogRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T07:55:04.694Z",
               "EditorCaption": ""
             },
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "PostCreateMapper.cs",
-              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Mappers\\PostCreateMapper.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Mappers\\PostCreateMapper.cs",
               "RelativeDocumentMoniker": "Project\\Mappers\\PostCreateMapper.cs",
-              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Mappers\\PostCreateMapper.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Mappers\\PostCreateMapper.cs",
               "RelativeToolTip": "Project\\Mappers\\PostCreateMapper.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T07:43:56.466Z"
+              "WhenOpened": "2026-02-02T07:43:56.466Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "PostCreateDto.cs",
-              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Dto\\PostCreateDto.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Dto\\PostCreateDto.cs",
               "RelativeDocumentMoniker": "Project\\Dto\\PostCreateDto.cs",
-              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Dto\\PostCreateDto.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Dto\\PostCreateDto.cs",
               "RelativeToolTip": "Project\\Dto\\PostCreateDto.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T07:43:00.378Z"
+              "WhenOpened": "2026-02-02T07:43:00.378Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "PostReadMapper.cs",
-              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Mappers\\PostReadMapper.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Mappers\\PostReadMapper.cs",
               "RelativeDocumentMoniker": "Project\\Mappers\\PostReadMapper.cs",
-              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Mappers\\PostReadMapper.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Mappers\\PostReadMapper.cs",
               "RelativeToolTip": "Project\\Mappers\\PostReadMapper.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB4AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAACQAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-02T07:29:40.671Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "PostReadDto.cs",
-              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Dto\\PostReadDto.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Dto\\PostReadDto.cs",
               "RelativeDocumentMoniker": "Project\\Dto\\PostReadDto.cs",
-              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Project\\Dto\\PostReadDto.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Dto\\PostReadDto.cs",
               "RelativeToolTip": "Project\\Dto\\PostReadDto.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T07:28:46.332Z"
+              "WhenOpened": "2026-02-02T07:28:46.332Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "Post.cs",
-              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Domain\\Models\\Entities\\Post.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Domain\\Models\\Entities\\Post.cs",
               "RelativeDocumentMoniker": "Domain\\Models\\Entities\\Post.cs",
-              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Domain\\Models\\Entities\\Post.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Domain\\Models\\Entities\\Post.cs",
               "RelativeToolTip": "Domain\\Models\\Entities\\Post.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAwwDoAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAABgAAAAAAAAAAAAowDoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-02T07:21:42.946Z"
+              "WhenOpened": "2026-02-02T07:21:42.946Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "BlogService.cs",
+              "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\UseCases\\BlogService.cs",
+              "RelativeDocumentMoniker": "Project\\UseCases\\BlogService.cs",
+              "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\UseCases\\BlogService.cs",
+              "RelativeToolTip": "Project\\UseCases\\BlogService.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAwwCoAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-02T07:57:48.136Z",
+              "EditorCaption": ""
             }
           ]
         }
