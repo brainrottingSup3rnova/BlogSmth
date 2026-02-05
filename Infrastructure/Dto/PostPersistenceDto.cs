@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace Infrastructure.Dto
 {
-    public record PostReadPersistenceDto(
+    public record PostPersistenceDto(
         string Id,
         string Title,
         string Content,
-        DateTime CreatedAt
+        long TimeStamp
         );
 }

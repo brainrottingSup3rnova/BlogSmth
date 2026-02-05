@@ -7,6 +7,7 @@ using Infrastructure.Dto;
 using Infrastructure.Mapper;
 using Application.Interfaces;
 using Domain.Models.Entities;
+using System.Text.Json;
 
 namespace Infrastructure.Repositories
 {
@@ -15,8 +16,21 @@ namespace Infrastructure.Repositories
         private readonly string _filePath = "blogposts.json";
         private Dictionary<string, Post> _postList = new Dictionary<string, Post>();
         private bool _isDataLoaded = false;
+        private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
-        private void EnsureDataLoaded()
+        private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
+        {
+            PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+            WriteIndented = true
+        };
+
+        public JsonBlogRepository(string? filePath = null)
+        {
+            _filePath = filePath ?? Path.Combine(AppContext.BaseDirectory, "blogposts.json");
+        }
+
+        //utile solo se usato soltanto in locale/da questa applicazione
+        private async Task EnsureDataLoaded()
         {
             if (_isDataLoaded)
             {
@@ -25,29 +39,38 @@ namespace Infrastructure.Repositories
 
             if (!File.Exists(_filePath))
             {
-                _isDataLoaded = true;
-                return;
-            }
+                await using FileStream stream = File.OpenRead(_filePath);
+                var postDto = await JsonSerializer.DeserializeAsync<Dictionary<string, PostPersistenceDto>>(stream);
 
-            var jsonData = File.ReadAllText(_filePath);
-            var dtoList = System.Text.Json.JsonSerializer.Deserialize<List<PostReadPersistenceDto>>(jsonData);
-
-            if (dtoList != null)
-            {
-                _postList = dtoList.ToDictionary(dto => dto.Id, dto => dto.ToEntity());
+                _postList = postDto!.Select(kv => kv.Value.ToEntity()).ToDictionary(post => post.Id.ToString(), post => post);
             }
 
             _isDataLoaded = true;
         }
 
+        private async Task SaveDataAsync()
+        {
+            await _semaphore.WaitAsync();
+            try
+            {
+                //TODO: FINISH THIS METHOD
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
+        }
+
         public async Task SaveAsync(Post post)
         {
-            EnsureDataLoaded();
+            await EnsureDataLoaded();
+            _postList.Add(post.Id.ToString(), post);
+            await SaveDataAsync();
         }
 
         public async Task<IEnumerable<Post>> GetAllAsync()
         {
-            EnsureDataLoaded();
+            await EnsureDataLoaded();
 
             Post[] posts = new Post[_postList.Count];
             for(int i = 0; i < _postList.Count; i++)
@@ -60,26 +83,64 @@ namespace Infrastructure.Repositories
 
         public async Task<Post?> GetByIdAsync(string id)
         {
-            EnsureDataLoaded();
+            await EnsureDataLoaded();
 
             Post? post;
-            _postList.TryGetValue(id, out post);
+
+            if (String.IsNullOrEmpty(id))
+            {
+                throw new ArgumentException("Id cannot be null or empty.", nameof(id));
+            }
+            else if (!_postList.ContainsKey(id))
+            {
+                throw new KeyNotFoundException($"Post with Id {id} not found.");
+            }
+            else
+            {
+                _postList.TryGetValue(id, out post);
+                if (post == null)
+                {
+                    throw new ArgumentException(nameof(post));
+                }
+            }
 
             return post;
         }
 
         public async Task UpdateAsync(Post post)
         {
-            EnsureDataLoaded();
+            await EnsureDataLoaded();
 
-            _postList[post.Id.ToString()] = post;
+            if(post == null)
+            {
+                throw new ArgumentNullException(nameof(post));
+            }
+            else
+            {
+                _postList[post.Id.ToString()] = post;
+            }
+
+            await SaveDataAsync();
         }
 
         public async Task DeleteAsync(string id)
         {
-            EnsureDataLoaded();
+            await EnsureDataLoaded();
 
-            _postList.Remove(id);
+            if(String.IsNullOrEmpty(id))
+            {
+                throw new ArgumentException("Id cannot be null or empty.", nameof(id));
+            }
+            else if(!_postList.ContainsKey(id))
+            {
+                throw new KeyNotFoundException($"Post with Id {id} not found.");
+            }
+            else
+            {
+                _postList.Remove(id);
+            }
+
+            await SaveDataAsync();
         }
     }
 }

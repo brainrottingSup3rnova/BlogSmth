@@ -10,23 +10,23 @@ namespace Infrastructure.Mapper
 {
     public static class PostReadPersistenceMapper
     {
-        public static PostReadPersistenceDto ToPersistenceDto(this Post post)
+        public static PostPersistenceDto ToPersistenceDto(this Post post)
         {
-            return new PostReadPersistenceDto(
+            return new PostPersistenceDto(
                 post.Id.ToString(),
                 post.Title,
                 post.Content,
-                post.CreatedAt
+                ((DateTimeOffset)post.CreatedAt).ToUnixTimeSeconds() //converts DateTime to long Unix timestamp
                 );
         }
 
-        public static Post ToEntity(this PostReadPersistenceDto dto)
+        public static Post ToEntity(this PostPersistenceDto dto)
         {
             return new Post(
                 new Guid(dto.Id),
                 dto.Title,
                 dto.Content,
-                dto.CreatedAt
+                DateTimeOffset.FromUnixTimeSeconds(dto.TimeStamp).DateTime // converts long Unix timestamp back to DateTime
                 );
         }
     }
