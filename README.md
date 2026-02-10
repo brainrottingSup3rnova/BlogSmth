@@ -1,7 +1,9 @@
 📝 Blog Post Manager
+
 Gestione semplice ed estensibile dei post di un blog (titolo, contenuto, data e ora) in C#.
 
 📌 Descrizione
+
 Questo progetto fornisce una base per creare, leggere, aggiornare e cancellare (CRUD) post di un blog.
 Ogni post contiene:
 
