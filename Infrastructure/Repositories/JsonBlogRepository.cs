@@ -26,7 +26,22 @@ namespace Infrastructure.Repositories
 
         public JsonBlogRepository(string? filePath = null)
         {
-            _filePath = filePath ?? Path.Combine(AppContext.BaseDirectory, "blogposts.json");
+            _filePath = filePath ?? Path.Combine(
+                Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData),
+                "BlogProject",
+                "posts.json"
+                );
+
+            var directory = Path.GetDirectoryName(_filePath);
+            if(!string.IsNullOrEmpty(directory) && !Directory.Exists(directory))
+            {
+                Directory.CreateDirectory(directory);
+            }
+
+            if(!File.Exists(_filePath))
+            {
+                File.WriteAllText(_filePath, "{}");
+            }
         }
 
         //utile solo se usato soltanto in locale/da questa applicazione
@@ -53,7 +68,7 @@ namespace Infrastructure.Repositories
             await _semaphore.WaitAsync();
             try
             {
-                //TODO: FINISH THIS METHOD
+                
             }
             finally
             {
