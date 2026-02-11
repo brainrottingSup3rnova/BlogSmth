@@ -10,10 +10,14 @@ namespace Application.Interfaces
     //descrive tutti i metodi che costituiranno il service, utile per la build 
     public interface IBlogService
     {
-        public Task CreatePostAsync(PostCreateDto postDto);
-        public Task<PostCreateDto?> GetPostByIdAsync(string id);
-        public Task<IEnumerable<PostReadDto>> GetAllPostsAsync();
-        public Task UpdatePostAsync(string id, PostCreateDto postDto);
-        public Task DeletePostAsync(string id);
+        public Task CreateArticleAsync(PostCreateDto articleDto);
+
+        public Task<PostReadDto?> GetArticleByIdAsync(string id);
+
+        public Task<IEnumerable<PostReadDto>> GetAllArticlesAsync();
+
+        public Task UpdateArticleAsync(string id, PostCreateDto articleDto);
+
+        public Task DeleteArticleAsync(string id);
     }
 }

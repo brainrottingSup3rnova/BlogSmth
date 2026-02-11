@@ -9,10 +9,11 @@ namespace Application.Interfaces
 {
     public interface IBlogRepository
     {
-        Task SaveAsync(Post post);
+        Task SaveAsync(Post article);
         Task<Post?> GetByIdAsync(string id);
         Task<IEnumerable<Post>> GetAllAsync();
-        Task UpdateAsync(Post post);
+        Task UpdateAsync(Post article);
         Task DeleteAsync(string id);
+
     }
 }

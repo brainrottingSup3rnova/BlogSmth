@@ -11,64 +11,53 @@ namespace Application.UseCases
 {
     public class BlogService : IBlogService
     {
-        private readonly IBlogRepository _blogRepository;
+        private readonly IBlogRepository _repository;
 
-        //dependency injection
-        public BlogService(IBlogRepository blogRepository)
+        public BlogService(IBlogRepository repository)
         {
-            _blogRepository = blogRepository;
+            _repository = repository;
         }
 
-        public async Task CreatePostAsync(PostCreateDto postDto)
+        public async Task CreateArticleAsync(PostCreateDto articleDto)
         {
-            var entity = postDto.ToCreateEntity();
+            // MAPPATURA: DTO -> Domain Entity
+            var entity = articleDto.ToCreateEntity();
 
-            await _blogRepository.SaveAsync(entity);
+            await _repository.SaveAsync(entity);
         }
 
-        public async Task<PostCreateDto?> GetPostByIdAsync(string id)
+        public async Task<PostReadDto?> GetArticleByIdAsync(string id)
         {
-            var entity = await _blogRepository.GetByIdAsync(id);
+            var entity = await _repository.GetByIdAsync(id);
+            if (entity == null) return null;
 
-            if(entity == null)
-            {
-                return null;
-            }
-            return entity.ToCreateDto();
+            return entity.ToReadDto();
         }
 
-        public async Task<IEnumerable<PostReadDto>> GetAllPostsAsync()
+        public async Task<IEnumerable<PostReadDto>> GetAllArticlesAsync()
         {
-            var entities = await _blogRepository.GetAllAsync();
+            var entities = await _repository.GetAllAsync();
 
-            //map each entity to dto
+            // MAPPATURA: Collection Entity -> Collection DTO
             return entities.Select(e => e.ToReadDto());
         }
 
-        public async Task UpdatePostAsync(string id, PostCreateDto postDto)
+        public async Task UpdateArticleAsync(string id, PostCreateDto articleDto)
         {
-            var entity = await _blogRepository.GetByIdAsync(id);
-
+            var entity = await _repository.GetByIdAsync(id);
             if (entity == null)
-            {
-                throw new KeyNotFoundException($"Post with id {id} not found.");
-            }
-            entity.Title = postDto.Title;
-            entity.Content = postDto.Content;
+                throw new InvalidOperationException($"Articolo {id} non trovato");
 
-            await _blogRepository.UpdateAsync(entity);
+            entity.Title = articleDto.Title;
+            entity.Content = articleDto.Content;
+
+            await _repository.UpdateAsync(entity);
         }
 
-        public async Task DeletePostAsync(string id)
+        public async Task DeleteArticleAsync(string id)
         {
-            var post = await _blogRepository.GetByIdAsync(id);
-
-            if (post == null)
-            {
-                throw new KeyNotFoundException($"Post with id {id} not found.");
-            }
-
-            await _blogRepository.DeleteAsync(id);
+            await _repository.DeleteAsync(id);
         }
     }
 }
+
