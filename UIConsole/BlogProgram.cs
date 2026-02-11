@@ -225,7 +225,55 @@ namespace BlogConsole
         // ============================================================================
         static async Task ModificaArticolo(IBlogService blogService)
         {
-            Console.Write("MODIFICA ARTICOLO - Metodo ancora da implementare!!!!!!!!!!!!!!!!");
+            Console.WriteLine("============================================================================");
+            Console.WriteLine("4. MODIFICA UN ARTICOLO SPECIFICO");
+            Console.WriteLine("============================================================================");
+
+            Console.Write("Inserisci l'ID dell'articolo: ");
+            var id = Console.ReadLine()?.Trim();
+
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                Console.WriteLine("ID non valido!");
+                return;
+            }
+
+            Console.WriteLine("\nRicerca in corso...\n");
+            var articolo = await blogService.GetArticleByIdAsync(id);
+
+            if (articolo == null)
+            {
+                Console.WriteLine($"Articolo con ID '{id}' non trovato!");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Articolo trovato con successo!");
+            }
+
+            Console.Write("Nuovo titolo: ");
+            string title = Console.ReadLine() ?? "";
+
+            if (string.IsNullOrWhiteSpace(title))
+            {
+                Console.WriteLine("Il titolo non può essere vuoto!");
+                return;
+            }
+
+            Console.Write("Nuovo contenuto: ");
+            string content = Console.ReadLine() ?? "";
+
+            if (string.IsNullOrWhiteSpace(content))
+            {
+                Console.WriteLine("Il contenuto non può essere vuoto!");
+                return;
+            }
+
+            Console.WriteLine("\nSalvataggio in corso...");
+
+            await blogService.UpdateArticleAsync(articolo.Id, new PostCreateDto(title, content));
+
+            Console.WriteLine("Articolo pubblicato con successo!");
         }
 
         // ============================================================================
@@ -233,8 +281,34 @@ namespace BlogConsole
         // ============================================================================
         static async Task EliminaArticolo(IBlogService blogService)
         {
-            Console.Write("ELIMINA ARTICOLO - Metodo ancora da implementare!!!!!!!!!!!!!!!!");
+            Console.WriteLine("============================================================================");
+            Console.WriteLine("5. ELIMINA UN ARTICOLO SPECIFICO");
+            Console.WriteLine("============================================================================");
 
+            Console.Write("Inserisci l'ID dell'articolo: ");
+            var id = Console.ReadLine()?.Trim();
+            if (string.IsNullOrWhiteSpace(id))
+            {
+                Console.WriteLine("ID non valido!");
+                return;
+            }
+
+            Console.WriteLine("\nRicerca in corso...\n");
+            var articolo = await blogService.GetArticleByIdAsync(id);
+
+            if (articolo == null)
+            {
+                Console.WriteLine($"Articolo con ID '{id}' non trovato!");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Articolo trovato con successo!");
+            }
+
+            await blogService.DeleteArticleAsync(articolo.Id);
+
+            Console.WriteLine("Articolo eliminato con successo!");
         }
 
         // ============================================================================
@@ -242,12 +316,116 @@ namespace BlogConsole
         // ============================================================================
         static async Task TestCompleto(IBlogService blogService)
         {
-            Console.Write("TEST COMPLETO CRUD - Metodo ancora da implementare!!!!!!!!!!!!!!!!");
+            Console.WriteLine("============================================================================");
+            Console.WriteLine("6. CRUD TESTO COMPLETO");
+            Console.WriteLine("============================================================================");
 
+            Console.WriteLine("============================================================================");
+            Console.WriteLine("CREA UN NUOVO ARTICOLO");
+            Console.WriteLine("============================================================================");
+
+            Console.Write("Titolo: ");
+            string titleCreate = Console.ReadLine() ?? "";
+
+            if (string.IsNullOrWhiteSpace(titleCreate))
+            {
+                Console.WriteLine("Il titolo non può essere vuoto!");
+                return;
+            }
+
+            Console.Write("Contenuto: ");
+            string contentCreate = Console.ReadLine() ?? "";
+
+            if (string.IsNullOrWhiteSpace(contentCreate))
+            {
+                Console.WriteLine("Il contenuto non può essere vuoto!");
+                return;
+            }
+
+            Console.WriteLine("\nSalvataggio in corso...");
+
+            await blogService.CreateArticleAsync(new PostCreateDto(titleCreate, contentCreate));
+
+            Console.WriteLine("Articolo pubblicato con successo!");
+
+            Console.WriteLine("============================================================================");
+            Console.WriteLine("5. MODIFICA UN ARTICOLO");
+            Console.WriteLine("============================================================================");
+
+            Console.Write("Inserisci l'ID dell'articolo: ");
+            var idUpdate = Console.ReadLine()?.Trim();
+
+            if (string.IsNullOrWhiteSpace(idUpdate))
+            {
+                Console.WriteLine("ID non valido!");
+                return;
+            }
+
+            Console.WriteLine("\nRicerca in corso...\n");
+            var articoloUpdate = await blogService.GetArticleByIdAsync(idUpdate);
+
+            if (articoloUpdate == null)
+            {
+                Console.WriteLine($"Articolo con ID '{idUpdate}' non trovato!");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Articolo trovato con successo!");
+            }
+
+            Console.Write("Nuovo titolo: ");
+            string titleUpdate = Console.ReadLine() ?? "";
+
+            if (string.IsNullOrWhiteSpace(titleUpdate))
+            {
+                Console.WriteLine("Il titolo non può essere vuoto!");
+                return;
+            }
+
+            Console.Write("Nuovo contenuto: ");
+            string contentUpdate = Console.ReadLine() ?? "";
+
+            if (string.IsNullOrWhiteSpace(contentUpdate))
+            {
+                Console.WriteLine("Il contenuto non può essere vuoto!");
+                return;
+            }
+
+            Console.WriteLine("\nSalvataggio in corso...");
+
+            await blogService.UpdateArticleAsync(articoloUpdate.Id, new PostCreateDto(titleUpdate, contentUpdate));
+
+            Console.WriteLine("Articolo pubblicato con successo!");
+
+            Console.WriteLine("============================================================================");
+            Console.WriteLine("5. ELIMINA UN ARTICOLO SPECIFICO");
+            Console.WriteLine("============================================================================");
+
+            Console.Write("Inserisci l'ID dell'articolo: ");
+            var idDelete = Console.ReadLine()?.Trim();
+            if (string.IsNullOrWhiteSpace(idDelete))
+            {
+                Console.WriteLine("ID non valido!");
+                return;
+            }
+
+            Console.WriteLine("\nRicerca in corso...\n");
+            var articoloDelete = await blogService.GetArticleByIdAsync(idDelete);
+
+            if (articoloDelete == null)
+            {
+                Console.WriteLine($"Articolo con ID '{idDelete}' non trovato!");
+                return;
+            }
+            else
+            {
+                Console.WriteLine("Articolo trovato con successo!");
+            }
+
+            await blogService.DeleteArticleAsync(articoloDelete.Id);
+
+            Console.WriteLine("Articolo eliminato con successo!");
         }
-    }
-}
-
-
     }
 }
