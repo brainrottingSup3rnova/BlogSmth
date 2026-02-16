@@ -20,6 +20,9 @@ namespace Infrastructure.Repositories
         //SemaphoreSlim: "Sospende" il task senza bloccare il thread sottostante, permettendo al server di fare altro mentre aspetta il suo turno per scrivere sul file. È molto più scalabile.
         private readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
+        private const string _separator = "|| SEPARATOR ||";
+        private const string _newLine = "|| NEW LINE ||";
+
         private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
         {
             PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
@@ -46,7 +49,7 @@ namespace Infrastructure.Repositories
             // Crea il file se non esiste
             if (!File.Exists(_filePath))
             {
-                SaveToFileAsync(new Dictionary<string, PostPersistenceDto>());
+                File.Create(_filePath).Dispose(); 
             }
         }
 
@@ -68,23 +71,52 @@ namespace Infrastructure.Repositories
 
         private async Task<Dictionary<string, PostPersistenceDto>> LoadFromFileAsync()
         {
+            Dictionary<string, PostPersistenceDto> articles = new Dictionary<string, PostPersistenceDto>();
+
             if (!File.Exists(_filePath))
-                return new Dictionary<string, PostPersistenceDto>();
+                return articles;
 
-            using FileStream openStream = File.OpenRead(_filePath);
+            string[] lines = await File.ReadAllLinesAsync(_filePath);
 
-            // Se il file è vuoto, DeserializeAsync restituirebbe null o errore
-            if (openStream.Length == 0)
-                return new Dictionary<string, PostPersistenceDto>();
+            foreach (string line in lines)
+            {
+                if (string.IsNullOrEmpty(line))
+                    continue;
 
-            return await JsonSerializer.DeserializeAsync<Dictionary<string, PostPersistenceDto>>(openStream, _jsonOptions)
-                    ?? new Dictionary<string, PostPersistenceDto>();
+                string[] parts = line.Split(_separator, StringSplitOptions.None);
+
+                if (parts.Length != 4)
+                    continue; 
+
+                string id = parts[0];
+                string title = parts[1].Replace(_newLine, "\n");
+                string content = parts[2].Replace(_newLine, "\n");
+                long timeStamp = long.Parse(parts[3]);
+
+                PostPersistenceDto dto = new PostPersistenceDto(id,title, content,timeStamp);
+                articles[id] = dto;
+            }
+
+            return articles;
         }
 
         private async Task SaveToFileAsync(Dictionary<string, PostPersistenceDto> articles)
         {
-            using FileStream createStream = File.Create(_filePath);
-            await JsonSerializer.SerializeAsync(createStream, articles, _jsonOptions);
+            List<string> lines = new List<string>();
+
+            foreach (var kvp in articles)
+            {
+                PostPersistenceDto dto = kvp.Value;
+
+                string title = dto.Title.Replace("\n", _newLine) ?? string.Empty;
+                string content = dto.Content.Replace("\n", _newLine) ?? string.Empty;
+
+                string line = $"{dto.Id}{_separator}{title}{_separator}{content}{_separator}{dto.TimeStamp}";
+
+                lines.Add(line);
+            }
+
+            await File.WriteAllLinesAsync(_filePath, lines);
         }
 
         public async Task<Post?> GetByIdAsync(string id)

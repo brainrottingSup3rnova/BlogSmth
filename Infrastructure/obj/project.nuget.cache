@@ -1,12 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1/OLLdPO5No=",
+  "dgSpecHash": "ZXt/LaK6KMM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\Blog\\Infrastructure\\Infrastructure.csproj",
-  "expectedPackageFiles": [
-    "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512"
-  ],
+  "projectFilePath": "C:\\Users\\tassi\\Desktop\\New folder\\BlogSmth\\Infrastructure\\Infrastructure.csproj",
+  "expectedPackageFiles": [],
   "logs": []
 }
