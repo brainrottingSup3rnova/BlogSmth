@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BkAlIDP2uZU=",
+  "dgSpecHash": "xB5lr4ow8rU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Project\\Application.csproj",
+  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Project\\Application.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
