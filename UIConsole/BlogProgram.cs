@@ -19,7 +19,7 @@ namespace BlogConsole
                 .ConfigureServices((context, services) =>
                 {
                     services.AddScoped<IBlogRepository>(sp => //aggiunge un service, creandone un'istanza
-                        new JsonBlogRepository());
+                        new TxtBlogRepository());
 
                     services.AddScoped<IBlogService, BlogService>();
                 })
