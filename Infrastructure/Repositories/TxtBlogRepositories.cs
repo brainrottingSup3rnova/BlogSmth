@@ -71,33 +71,47 @@ namespace Infrastructure.Repositories
 
         private async Task<Dictionary<string, PostPersistenceDto>> LoadFromFileAsync()
         {
-            Dictionary<string, PostPersistenceDto> articles = new Dictionary<string, PostPersistenceDto>();
-
-            if (!File.Exists(_filePath))
-                return articles;
-
-            string[] lines = await File.ReadAllLinesAsync(_filePath);
-
-            foreach (string line in lines)
+            await _semaphore.WaitAsync();
+            try
             {
-                if (string.IsNullOrEmpty(line))
-                    continue;
+                Dictionary<string, PostPersistenceDto> articles = new Dictionary<string, PostPersistenceDto>();
 
-                string[] parts = line.Split(_separator, StringSplitOptions.None);
+                if (!File.Exists(_filePath))
+                    return articles;
 
-                if (parts.Length != 4)
-                    continue; 
+                string[] lines = await File.ReadAllLinesAsync(_filePath);
 
-                string id = parts[0];
-                string title = parts[1].Replace(_newLine, "\n");
-                string content = parts[2].Replace(_newLine, "\n");
-                long timeStamp = long.Parse(parts[3]);
+                foreach (string line in lines)
+                {
+                    if (string.IsNullOrEmpty(line))
+                        continue;
 
-                PostPersistenceDto dto = new PostPersistenceDto(id,title, content,timeStamp);
-                articles[id] = dto;
+                    string[] parts = line.Split(_separator, StringSplitOptions.None);
+
+                    if (parts.Length != 4)
+                        continue;
+
+                    string id = parts[0];
+                    string title = parts[1].Replace(_newLine, "\n");
+                    string content = parts[2].Replace(_newLine, "\n");
+                    long timeStamp = long.Parse(parts[3]);
+
+                    PostPersistenceDto dto = new PostPersistenceDto(id, title, content, timeStamp);
+                    articles[id] = dto;
+                }
+
+                return articles;
             }
-
-            return articles;
+            catch (Exception ex)
+            {
+                // Log dell'errore
+                Console.Error.WriteLine($"Errore durante la lettura del file: {ex.Message}");
+                return new Dictionary<string, PostPersistenceDto>();
+            }
+            finally
+            {
+                _semaphore.Release();
+            }
         }
 
         private async Task SaveToFileAsync(Dictionary<string, PostPersistenceDto> articles)

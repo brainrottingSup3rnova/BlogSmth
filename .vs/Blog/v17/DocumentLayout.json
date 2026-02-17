@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{95A27AAD-CD10-4525-B10A-06CF8D70D2EB}|UIConsole\\UIConsole.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\uiconsole\\blogprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95A27AAD-CD10-4525-B10A-06CF8D70D2EB}|UIConsole\\UIConsole.csproj|solutionrelative:uiconsole\\blogprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6CD77C7D-BDC3-4FAE-9769-6667A7FCCEFB}|Infrastructure\\Infrastructure.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\infrastructure\\repositories\\txtblogrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6CD77C7D-BDC3-4FAE-9769-6667A7FCCEFB}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\txtblogrepositories.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95A27AAD-CD10-4525-B10A-06CF8D70D2EB}|UIConsole\\UIConsole.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\uiconsole\\blogprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95A27AAD-CD10-4525-B10A-06CF8D70D2EB}|UIConsole\\UIConsole.csproj|solutionrelative:uiconsole\\blogprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6CD77C7D-BDC3-4FAE-9769-6667A7FCCEFB}|Infrastructure\\Infrastructure.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\infrastructure\\repositories\\jsonblogrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -62,30 +62,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "TxtBlogRepositories.cs",
               "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Infrastructure\\Repositories\\TxtBlogRepositories.cs",
               "RelativeDocumentMoniker": "Infrastructure\\Repositories\\TxtBlogRepositories.cs",
               "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Infrastructure\\Repositories\\TxtBlogRepositories.cs",
               "RelativeToolTip": "Infrastructure\\Repositories\\TxtBlogRepositories.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAswEsAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-16T07:04:38.583Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "BlogProgram.cs",
               "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\UIConsole\\BlogProgram.cs",
               "RelativeDocumentMoniker": "UIConsole\\BlogProgram.cs",
               "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\UIConsole\\BlogProgram.cs",
               "RelativeToolTip": "UIConsole\\BlogProgram.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAA8BAAAAAAAAAAAcwBsAAABRAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-10T10:41:55.382Z",
               "EditorCaption": ""
