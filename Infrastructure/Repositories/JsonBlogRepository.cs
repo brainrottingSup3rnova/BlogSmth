@@ -11,7 +11,7 @@ using System.Text.Json;
 
 namespace Infrastructure.Repositories
 {
-    public class JsonBlogRepository : AbstractBlogRepository
+    public class JsonBlogRepository : AbstractBlogRepository, IBlogRepository
     {
         private static readonly JsonSerializerOptions _jsonOptions = new JsonSerializerOptions
         {

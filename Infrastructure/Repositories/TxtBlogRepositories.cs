@@ -11,7 +11,7 @@ using System.Text.Json;
 
 namespace Infrastructure.Repositories
 {
-    public class TxtBlogRepository : AbstractBlogRepository
+    public class TxtBlogRepository : AbstractBlogRepository, IBlogRepository
     {
         private const string _separator = "|| SEPARATOR ||";
         private const string _newLine = "|| NEW LINE ||";

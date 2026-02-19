@@ -20,7 +20,9 @@ namespace Infrastructure.Repositories
         //SemaphoreSlim: "Sospende" il task senza bloccare il thread sottostante, permettendo al server di fare altro mentre aspetta il suo turno per scrivere sul file. È molto più scalabile.
         protected readonly SemaphoreSlim _semaphore = new SemaphoreSlim(1, 1);
 
-        public AbstractBlogRepository(string? filePath = null) { }
+        public AbstractBlogRepository(string? filePath = null) 
+        { 
+        }
 
         public abstract Task<Dictionary<string, PostPersistenceDto>> LoadFromFileAsync();
         public abstract Task SaveToFileAsync(Dictionary<string, PostPersistenceDto> articles);

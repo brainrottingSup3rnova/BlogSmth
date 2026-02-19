@@ -1,5 +1,5 @@
 ﻿using Application.Dto;
-using Application.Interfaces;   
+using Application.Interfaces;
 using Application.UseCases;
 using Domain.Models.Entities;
 using Infrastructure.Repositories;
@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 
-namespace BlogConsole
+namespace UIConsole
 {
     internal class BlogProgram
     {
@@ -19,7 +19,7 @@ namespace BlogConsole
                 .ConfigureServices((context, services) =>
                 {
                     services.AddScoped<IBlogRepository>(sp => //aggiunge un service, creandone un'istanza
-                        new TxtBlogRepository());
+                        new JsonBlogRepository());
 
                     services.AddScoped<IBlogService, BlogService>();
                 })
