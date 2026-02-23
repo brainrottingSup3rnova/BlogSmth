@@ -22,7 +22,7 @@ namespace BlogWpf
             _host = Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) => 
                 {
-                    services.AddSingleton<IBlogRepository>(sp => new JsonBlogRepository());
+                    services.AddSingleton<IBlogRepository>(sp => new JsonBlogRepository()); 
                     services.AddSingleton<IBlogService, BlogService>();
                     services.AddSingleton<HomeViewModel>();
                     services.AddSingleton<MainWindow>();
@@ -33,6 +33,7 @@ namespace BlogWpf
             var mainWindow = _host.Services.GetRequiredService<MainWindow>();
             mainWindow.Show();
 
+            base.OnStartup(e);
         }
 
         protected override async void OnExit(ExitEventArgs e)
