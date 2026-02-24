@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "uFqg7OSkqZk=",
+  "dgSpecHash": "FPPH1l8ilmU=",
   "success": true,
-  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\UIConsole\\UIConsole.csproj",
+  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\UIConsole\\UIConsole.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.2\\microsoft.extensions.configuration.10.0.2.nupkg.sha512",
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.3\\microsoft.extensions.configuration.abstractions.10.0.3.nupkg.sha512",

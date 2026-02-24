@@ -7,6 +7,7 @@ using Infrastructure.Repositories;
 using Application.Interfaces;
 using Application.UseCases;
 using BlogWpf.ViewModels;
+using BlogWpf.Views;
 
 namespace BlogWpf
 {

@@ -1,4 +1,4 @@
-﻿<Window x:Class="BlogWpf.MainWindow"
+﻿<Window x:Class="BlogWpf.Views.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -22,8 +22,8 @@
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-        <Button Content="Create Article" Margin="10" Padding="5" Click="CreateArticle_Click"/>
-        <Button Content="Edit Article" Margin="10" Padding="5" Click="EditArticle_Click"/>
-        <Button Content="Delete Article" Margin="10" Padding="5" Click="DeleteArticle_Click"/>
+        <Button Content="Create Article" Margin="5" Padding="5"/>
+        <Button Content="Edit Article" Margin="5" Padding="5"/>
+        <Button Content="Delete Article" Margin="5" Padding="5"/>
     </StackPanel>
 </Window>
