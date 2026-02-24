@@ -10,20 +10,15 @@
         <StackPanel Orientation="Vertical" >
             <Label x:Name="lblHome" Content="Home brutta e schifosa" FontSize="30" HorizontalAlignment="Center"/>
             <Button Content="Load Articles" Margin="10" Padding="5" Command="{Binding LoadArticlesCommand}"/>
-            <ListBox x:Name="ArticlesListBox" Margin="10" Height="200" ItemsSource="{Binding Articles}" SelectedItem="{Binding SelectedArticle}">
+            <ListBox x:Name="ArticlesListBox" Margin="10" Height="200" ItemsSource="{Binding Articles}" SelectedItem="{Binding SelectedArt}" SelectionChanged="ArticlesListBox_SelectionChanged">
                 <ListBox.ItemTemplate>
                     <DataTemplate>
                         <StackPanel Orientation="Horizontal">
                             <TextBlock Text="{Binding Title}" FontWeight="Bold" Margin="5"/>
-                            <TextBlock Text="{Binding Author}" Margin="5"/>
-                            <TextBlock Text="{Binding PublishedDate, StringFormat='{}{0:MM/dd/yyyy}'}" Margin="5"/>
                         </StackPanel>
                     </DataTemplate> 
                 </ListBox.ItemTemplate>
             </ListBox>
         </StackPanel>
-        <Button Content="Create Article" Margin="5" Padding="5"/>
-        <Button Content="Edit Article" Margin="5" Padding="5"/>
-        <Button Content="Delete Article" Margin="5" Padding="5"/>
     </StackPanel>
 </Window>

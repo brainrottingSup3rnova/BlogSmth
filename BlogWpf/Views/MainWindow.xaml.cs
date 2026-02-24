@@ -22,5 +22,10 @@ namespace BlogWpf.Views
             InitializeComponent();
             DataContext = viewModel;
         }
+
+        private void ArticlesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // Gestione della selezione dell'articolo, se necessario
+        }
     }
 }

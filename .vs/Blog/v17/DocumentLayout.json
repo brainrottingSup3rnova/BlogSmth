@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\blogwpf\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|solutionrelative:blogwpf\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\blogwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|solutionrelative:blogwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\blogwpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|solutionrelative:blogwpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\blogwpf\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|solutionrelative:blogwpf\\views\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\blogwpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|solutionrelative:blogwpf\\views\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\blogwpf\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|solutionrelative:blogwpf\\viewmodels\\homeviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\blogwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{143A2781-F1D0-46A2-BDF8-0F79365424DB}|BlogWpf\\BlogWpf.csproj|solutionrelative:blogwpf\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{95A27AAD-CD10-4525-B10A-06CF8D70D2EB}|UIConsole\\UIConsole.csproj|c:\\users\\anna.tassinari\\desktop\\nuova cartella (3)\\blogsmth\\uiconsole\\blogprogram.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -34,24 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\BlogWpf\\Views\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "BlogWpf\\Views\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\BlogWpf\\Views\\MainWindow.xaml.cs",
               "RelativeToolTip": "BlogWpf\\Views\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAcwBUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAcwBkAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-02-24T10:19:02.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\BlogWpf\\Views\\MainWindow.xaml",
               "RelativeDocumentMoniker": "BlogWpf\\Views\\MainWindow.xaml",
@@ -63,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\BlogWpf\\App.xaml.cs",
               "RelativeDocumentMoniker": "BlogWpf\\App.xaml.cs",
@@ -71,12 +71,11 @@
               "RelativeToolTip": "BlogWpf\\App.xaml.cs",
               "ViewState": "AgIAAAUAAAAAAAAAAAAuwBAAAAA5AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-02-23T07:04:55.082Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-02-23T07:04:55.082Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "HomeViewModel.cs",
               "DocumentMoniker": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\BlogWpf\\ViewModels\\HomeViewModel.cs",
               "RelativeDocumentMoniker": "BlogWpf\\ViewModels\\HomeViewModel.cs",
