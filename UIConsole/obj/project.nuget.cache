@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FPPH1l8ilmU=",
+  "dgSpecHash": "pZpEjcfVpo0=",
   "success": true,
-  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\UIConsole\\UIConsole.csproj",
+  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\UIConsole\\UIConsole.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.extensions.configuration\\10.0.2\\microsoft.extensions.configuration.10.0.2.nupkg.sha512",
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\10.0.3\\microsoft.extensions.configuration.abstractions.10.0.3.nupkg.sha512",
@@ -35,11 +35,7 @@
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\system.diagnostics.eventlog\\10.0.2\\system.diagnostics.eventlog.10.0.2.nupkg.sha512",
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\system.io.pipelines\\10.0.2\\system.io.pipelines.10.0.2.nupkg.sha512",
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\system.text.encodings.web\\10.0.2\\system.text.encodings.web.10.0.2.nupkg.sha512",
-    "C:\\Users\\anna.tassinari\\.nuget\\packages\\system.text.json\\10.0.2\\system.text.json.10.0.2.nupkg.sha512",
-    "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\8.0.22\\microsoft.windowsdesktop.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.netcore.app.ref\\8.0.22\\microsoft.netcore.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\8.0.22\\microsoft.aspnetcore.app.ref.8.0.22.nupkg.sha512",
-    "C:\\Users\\anna.tassinari\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\8.0.22\\microsoft.netcore.app.host.win-x64.8.0.22.nupkg.sha512"
+    "C:\\Users\\anna.tassinari\\.nuget\\packages\\system.text.json\\10.0.2\\system.text.json.10.0.2.nupkg.sha512"
   ],
   "logs": []
 }

@@ -8,7 +8,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Application.Dto;
 using BlogWpf.ViewModels;
+using Microsoft.Extensions.Hosting;
 
 namespace BlogWpf.Views
 {
@@ -23,9 +25,5 @@ namespace BlogWpf.Views
             DataContext = viewModel;
         }
 
-        private void ArticlesListBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            // Gestione della selezione dell'articolo, se necessario
-        }
     }
 }
