@@ -5,23 +5,23 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlogWpf"
         mc:Ignorable="d"
-        Title="SeePostWindow" Height="400" Width="450">
+        Title="SeePostWindow" Height="420" Width="450"
+        Background="#F1F8F4">
     <StackPanel>
         <Label Content="Post Details" FontSize="30" HorizontalAlignment="Center" Margin="10"/>
         <StackPanel Margin="10">
-            <TextBlock Text="{Binding Post.Title}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-            <!--CAMBIA I TEXTBLOCK IN TEXTBOX COSì POI LI FAI MODIFICARE EH-->
-            <TextBlock Text="{Binding Post.Content}" TextWrapping="Wrap" Margin="0,0,0,10"/>
+            <Label Content="Titolo"/>
+            <TextBox Text="{Binding EditedTitle}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
+            <Label Content="Contenuto"/>
+            <TextBox Text="{Binding EditedContent}" TextWrapping="Wrap" Margin="0,0,0,10" Height="50"/>
             <TextBlock Text="{Binding Post.CreatedAt, StringFormat='Created At: {0:dd/MM/yyyy HH:mm}'}" FontStyle="Italic"/>
         </StackPanel>
         <StackPanel
             Orientation="Vertical"
-            HorizontalAlignment="Center"
-            Margin="30">
-            <Button Content="Edit" Margin="5" Height="25" Width="300" Padding="5" Command="{Binding EditPostCommand}"/>
-            <Button Content="Delete" Margin="5" Height="25" Width="300" Padding="5" Command="{Binding DeletePostCommand}"/>
-            <Button Content="Save" Margin="5" Height="25" Width="300" Padding="5" Command="{Binding UpdatePostCommand}"/>
-            <Button Content="Close" Margin="5" Click="CloseWindow_Click" Height="25" Width="300"/>
+            >
+            <Button Content="Save" Margin="0" Height="35" Width="300" Padding="5" Command="{Binding UpdatePostCommand}" Click="Save_Click" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
+            <Button Content="Delete" Margin="5" Height="35" Width="300" Padding="5" Command="{Binding DeletePostCommand}" Click="Delete_Click" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
+            <Button Content="Close" Margin="5" Click="CloseWindow_Click" Height="35" Width="300" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
         </StackPanel>
     </StackPanel>   
 </Window>

@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using BlogWpf.ViewModels;
 using Application.Dto;
+using System.Windows.Media.TextFormatting;
 
 namespace BlogWpf.Views
 {
@@ -30,6 +31,16 @@ namespace BlogWpf.Views
         }
 
         private void CloseWindow_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }

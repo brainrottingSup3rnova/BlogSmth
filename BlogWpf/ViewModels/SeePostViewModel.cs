@@ -25,6 +25,8 @@ namespace BlogWpf.ViewModels
         {
             _blogService = blogService;
             _post = postDto;
+            EditedContent = postDto.Content;
+            EditedTitle = postDto.Title;
         }
 
         [RelayCommand]
@@ -50,6 +52,19 @@ namespace BlogWpf.ViewModels
             catch (Exception ex)
             {
                 throw new Exception($"Errore durante la cancellazione del post: {ex.Message}");
+            }
+        }
+
+        [RelayCommand]
+        private async Task UpdatePost()
+        {
+            try
+            {
+                await _blogService.UpdateArticleAsync(_post.Id, new PostCreateDto(EditedTitle, EditedContent));
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"{ex.Message}");
             }
         }
     }

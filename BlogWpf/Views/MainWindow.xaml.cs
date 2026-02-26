@@ -25,5 +25,9 @@ namespace BlogWpf.Views
             DataContext = viewModel;
         }
 
+        private void Button_Leave(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
