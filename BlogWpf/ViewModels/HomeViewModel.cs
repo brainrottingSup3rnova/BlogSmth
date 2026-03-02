@@ -1,15 +1,16 @@
-﻿using Application.Dto;
+﻿using Accessibility;
+using Application.Dto;
 using Application.Interfaces;
+using BlogWpf.Views;
 using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
-using BlogWpf.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Accessibility;
+using System.Windows;
 
 namespace BlogWpf.ViewModels
 {
@@ -31,9 +32,6 @@ namespace BlogWpf.ViewModels
         private string _newContent = string.Empty;
 
         [ObservableProperty]
-        private bool _isLoading;
-
-        [ObservableProperty]
         private string _statusMessage = string.Empty;
 
         public bool IsArticleSelected => SelectedArticle != null;
@@ -51,9 +49,6 @@ namespace BlogWpf.ViewModels
         {
             try
             {
-                IsLoading = true;
-                StatusMessage = "Caricamento articoli...";
-
                 var articles = await _blogService.GetAllArticlesAsync();
 
                 Articles.Clear();
@@ -66,11 +61,7 @@ namespace BlogWpf.ViewModels
             }
             catch (Exception ex)
             {
-                StatusMessage = $"Errore: {ex.Message}";
-            }
-            finally
-            {
-                IsLoading = false;
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 

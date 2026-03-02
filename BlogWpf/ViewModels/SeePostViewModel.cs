@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using CommunityToolkit.Mvvm.Input;
+using System.Windows;
 
 namespace BlogWpf.ViewModels
 {
@@ -30,20 +31,7 @@ namespace BlogWpf.ViewModels
         }
 
         [RelayCommand]
-        private async Task EditPost()
-        {
-            try
-            {
-                await _blogService.UpdateArticleAsync(_post.Id, new PostCreateDto( _post.Title,_post.Content));
-            }
-            catch (Exception ex)
-            {
-                throw new Exception($"Errore durante la cancellazione del post: {ex.Message}");
-            }
-        }
-
-        [RelayCommand]
-        private async Task DeletePost()
+        private async Task DeletePostAsync()
         {
             try
             {
@@ -51,12 +39,12 @@ namespace BlogWpf.ViewModels
             }
             catch (Exception ex)
             {
-                throw new Exception($"Errore durante la cancellazione del post: {ex.Message}");
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
 
         [RelayCommand]
-        private async Task UpdatePost()
+        private async Task UpdatePostAsync()
         {
             try
             {
@@ -64,7 +52,7 @@ namespace BlogWpf.ViewModels
             }
             catch (Exception ex)
             {
-                throw new Exception($"{ex.Message}");
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

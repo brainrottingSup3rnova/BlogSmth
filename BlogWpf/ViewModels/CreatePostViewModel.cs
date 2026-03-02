@@ -1,11 +1,12 @@
 ﻿using Application.Interfaces;
+using CommunityToolkit.Mvvm.ComponentModel;
 using CommunityToolkit.Mvvm.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using CommunityToolkit.Mvvm.ComponentModel;
+using System.Windows;
 
 namespace BlogWpf.ViewModels
 {
@@ -33,7 +34,7 @@ namespace BlogWpf.ViewModels
             }
             catch (Exception ex)
             {
-                throw new Exception($"Errore durante la creazione del post: {ex.Message}");
+                MessageBox.Show($"{ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

@@ -5,16 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlogWpf"
         mc:Ignorable="d"
-        Title="SeePostWindow" Height="420" Width="450"
+        Title="SeePostWindow" Height="460" Width="460"
         Background="#F1F8F4">
     <StackPanel>
-        <Label Content="Post Details" FontSize="30" HorizontalAlignment="Center" Margin="10"/>
+        <Label Content="Post Details" FontSize="30" HorizontalAlignment="Center" Margin="10" FontFamily="Arial Rounded MT Bold"/>
         <StackPanel Margin="10">
-            <Label Content="Titolo"/>
+            <Label Content="Titolo" FontFamily="Arial Rounded MT Bold" FontSize="20"/>
             <TextBox Text="{Binding EditedTitle}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-            <Label Content="Contenuto"/>
+            <Label Content="Contenuto" FontFamily="Arial Rounded MT Bold" FontSize="20"/>
             <TextBox Text="{Binding EditedContent}" TextWrapping="Wrap" Margin="0,0,0,10" Height="50"/>
-            <TextBlock Text="{Binding Post.CreatedAt, StringFormat='Created At: {0:dd/MM/yyyy HH:mm}'}" FontStyle="Italic"/>
+            <TextBlock Text="{Binding Post.CreatedAt, StringFormat='Created At: {0:dd/MM/yyyy HH:mm}'}" FontStyle="Italic" FontFamily="Arial Rounded MT Bold"/>
         </StackPanel>
         <StackPanel
             Orientation="Vertical"

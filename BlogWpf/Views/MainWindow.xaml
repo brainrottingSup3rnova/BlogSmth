@@ -5,11 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BlogWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800"
+        Title="MainWindow" Height="500" Width="800"
         Background="#F1F8F4 ">
     <StackPanel>
         <StackPanel Orientation="Vertical" >
-            <Label x:Name="lblHome" Content="Blog Dashboard" FontSize="30" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold"/>
+            <Label x:Name="lblDashboard" Content="Blog Dashboard" FontSize="30" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold"/>
+            <Label Content="{Binding StatusMessage}" FontSize="16" FontStyle="Italic" HorizontalAlignment="Center" Foreground="#4F8F6B"/>
             <Button Content="Load Articles" Margin="10" Padding="5" Command="{Binding LoadArticlesCommand}" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
             <ListBox x:Name="ArticlesListBox" Margin="10" Height="200" ItemsSource="{Binding Articles}" SelectedItem="{Binding SelectedArticle}">
                 <ListBox.ItemTemplate>

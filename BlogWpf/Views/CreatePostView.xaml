@@ -11,9 +11,9 @@
         Orientation="Vertical">
         <Label Content="Create New Post" FontSize="30" HorizontalAlignment="Center" Margin="10" FontFamily="Arial Rounded MT Bold"/>
         <TextBlock Text="Title:" Margin="10,0,10,5" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
-        <TextBox Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,10" Height="30"/>
+        <TextBox Text="{Binding Title}" Margin="10,0,10,10" Height="30"/>
         <TextBlock Text="Content:" Margin="10,0,10,5" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
-        <TextBox Text="{Binding Content, UpdateSourceTrigger=PropertyChanged}" Margin="10,0,10,10" Height="100"/>
+        <TextBox Text="{Binding Content}" Margin="10,0,10,10" Height="100"/>
         <Button Content="Create" Margin="20" Height="50" Width="200" HorizontalAlignment="Center" Command="{Binding CreatePostCommand}" Click="Button_Click" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold">
             
         </Button>
