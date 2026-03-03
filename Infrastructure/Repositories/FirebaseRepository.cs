@@ -3,6 +3,7 @@ using Domain.Models.Entities;
 using Firebase.Database;
 using Infrastructure.Dto;
 using Infrastructure.Mapper;
+using Firebase.Database.Query;
 using System;
 using System.Collections.Generic;
 using System.Linq;
