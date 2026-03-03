@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Project\\Application.csproj": {}
+    "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Project\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Domain\\Domain.csproj": {
+    "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Domain\\Domain.csproj",
+        "projectPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Domain\\Domain.csproj",
         "packagesPath": "C:\\Users\\anna.tassinari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Domain\\obj\\",
+        "outputPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -366,14 +366,14 @@
         }
       }
     },
-    "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Project\\Application.csproj": {
+    "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Project\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Project\\Application.csproj",
+        "projectUniqueName": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Project\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Project\\Application.csproj",
+        "projectPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Project\\Application.csproj",
         "packagesPath": "C:\\Users\\anna.tassinari\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Project\\obj\\",
+        "outputPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -395,8 +395,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Users\\anna.tassinari\\Desktop\\orsi poolari MA DDOVE\\BlogSmth\\Domain\\Domain.csproj"
+              "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (3)\\BlogSmth\\Domain\\Domain.csproj"
               }
             }
           }
