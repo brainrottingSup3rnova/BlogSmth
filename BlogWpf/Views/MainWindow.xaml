@@ -3,27 +3,157 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:BlogWpf"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800"
-        Background="#F1F8F4 ">
-    <StackPanel>
-        <StackPanel Orientation="Vertical" >
-            <Label x:Name="lblDashboard" Content="Blog Dashboard" FontSize="30" HorizontalAlignment="Center" FontFamily="Arial Rounded MT Bold"/>
-            <Label Content="{Binding StatusMessage}" FontSize="16" FontStyle="Italic" HorizontalAlignment="Center" Foreground="#4F8F6B"/>
-            <Button Content="Load Articles" Margin="10" Padding="5" Command="{Binding LoadArticlesCommand}" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
-            <ListBox x:Name="ArticlesListBox" Margin="10" Height="200" ItemsSource="{Binding Articles}" SelectedItem="{Binding SelectedArticle}">
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                        <StackPanel Orientation="Vertical">
-                            <TextBlock Text="{Binding Title}" FontWeight="Bold" Margin="5"/>
-                            <TextBlock Text="{Binding CreatedAt, StringFormat='({0:dd/MM/yyyy HH:mm})'}" FontStyle="Italic" Margin="5"/>
-                        </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-            </ListBox>
-            <Button Content="Create New Article" Margin="10" Padding="5" Command="{Binding CreateArticleCommand}" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
-            <Button Content="Leave :(" Margin="10" Padding="5" Command="{Binding CreateArticleCommand}" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold" Click="Button_Leave"/>
+        Title="Blog Dashboard" Height="650" Width="900"
+        WindowStartupLocation="CenterScreen"
+        Background="#F4F7F6" FontFamily="Segoe UI">
+
+    <Window.Resources>
+        <Style x:Key="ModernButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#4F8F6B"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="8" 
+                                BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#3E7054"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="DangerButtonStyle" TargetType="Button" BasedOn="{StaticResource ModernButtonStyle}">
+            <Setter Property="Background" Value="#E57373"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#C62828"/>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Margin="0,0,0,25">
+            <TextBlock Text="Blog Dashboard" 
+                       FontSize="34" 
+                       FontWeight="ExtraBold" 
+                       Foreground="#2D3436"
+                       HorizontalAlignment="Left"/>
+            <TextBlock Text="{Binding StatusMessage}" 
+                       FontSize="14" 
+                       Foreground="#4F8F6B" 
+                       FontWeight="Medium"
+                       Margin="2,5,0,0"/>
         </StackPanel>
-    </StackPanel>
+
+        <Grid Grid.Row="1">
+            <Border Background="White" CornerRadius="15">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="15" Direction="-90" RenderingBias="Quality" ShadowDepth="2" Opacity="0.1"/>
+                </Border.Effect>
+
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <Button Content="↻ Refresh Articles" 
+                            Command="{Binding LoadArticlesCommand}"
+                            Style="{StaticResource ModernButtonStyle}"
+                            HorizontalAlignment="Right"
+                            Margin="15"
+                            FontSize="12"
+                            Height="20"
+                            Width="150"/>
+
+                    <ListBox x:Name="ArticlesListBox" 
+                             Grid.Row="1"
+                             Margin="15,0,15,15"
+                             ItemsSource="{Binding Articles}" 
+                             SelectedItem="{Binding SelectedArticle}"
+                             BorderThickness="0"
+                             Background="Transparent"
+                             ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+
+                        <ListBox.ItemTemplate>
+                            <DataTemplate>
+                                <Border Background="#F9FBF9" 
+                                        CornerRadius="10" 
+                                        Margin="0,0,0,10" 
+                                        Padding="15"
+                                        BorderBrush="#E8F0EB"
+                                        BorderThickness="1">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <StackPanel VerticalAlignment="Center">
+                                            <TextBlock Text="{Binding Title}" 
+                                                       FontSize="18" 
+                                                       FontWeight="Bold" 
+                                                       Foreground="#2D3436"/>
+                                            <TextBlock Text="{Binding CreatedAt, StringFormat='Pubblicato il {0:dd MMMM yyyy alle HH:mm}'}" 
+                                                       FontSize="12" 
+                                                       Foreground="#95A5A6"
+                                                       Margin="0,5,0,0"/>
+                                        </StackPanel>
+
+                                        <TextBlock Grid.Column="1" Text="→" 
+                                                   FontSize="20" VerticalAlignment="Center" 
+                                                   Foreground="#BDC3C7" Margin="10,0"/>
+                                    </Grid>
+                                </Border>
+                            </DataTemplate>
+                        </ListBox.ItemTemplate>
+
+                        <ListBox.ItemContainerStyle>
+                            <Style TargetType="ListBoxItem">
+                                <Setter Property="Template">
+                                    <Setter.Value>
+                                        <ControlTemplate TargetType="ListBoxItem">
+                                            <ContentPresenter />
+                                        </ControlTemplate>
+                                    </Setter.Value>
+                                </Setter>
+                            </Style>
+                        </ListBox.ItemContainerStyle>
+                    </ListBox>
+                </Grid>
+            </Border>
+        </Grid>
+
+        <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
+            <Button Content="Leave" 
+                    Style="{StaticResource DangerButtonStyle}" 
+                    Click="Button_Leave"
+                    Width="120"/>
+            <Button Content="+ Create New Article" 
+                    Command="{Binding CreateArticleCommand}"
+                    Style="{StaticResource ModernButtonStyle}"
+                    Width="200"
+                    Margin="10,0,0,0"/>
+        </StackPanel>
+    </Grid>
 </Window>

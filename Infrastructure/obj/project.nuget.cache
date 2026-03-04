@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "WczvCvSQoZg=",
+  "dgSpecHash": "aNO4KQ9Ba+M=",
   "success": true,
-  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella\\BlogSmth\\Infrastructure\\Infrastructure.csproj",
+  "projectFilePath": "C:\\Users\\anna.tassinari\\Desktop\\Nuova cartella (2)\\BlogSmth\\Infrastructure\\Infrastructure.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\firebasedatabase.net\\5.0.0\\firebasedatabase.net.5.0.0.nupkg.sha512",
     "C:\\Users\\anna.tassinari\\.nuget\\packages\\litedb\\5.0.17\\litedb.5.0.17.nupkg.sha512",

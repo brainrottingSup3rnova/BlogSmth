@@ -10,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml;
+using System.Net.WebSockets;
 
 namespace Infrastructure.Repositories
 {
@@ -55,7 +56,7 @@ namespace Infrastructure.Repositories
                 .Child(id)
                 .OnceSingleAsync<PostPersistenceDto>();
 
-            if(dto == null)
+            if (dto == null)
                 return null;
             return dto.ToEntity();
         }
@@ -74,6 +75,39 @@ namespace Infrastructure.Repositories
                 .Child(ArticlesNode)
                 .Child(article.Id.ToString())
                 .PutAsync(article.ToPersistenceDto());
+        }
+
+        public async Task<Post?> GetPostByTitleAsync(string title)
+        {
+            var dtos = await GetAllAsync();
+            return dtos.
+                FirstOrDefault(p => p.Title.Equals(title));
+        }
+
+        public async Task<Post?> GetPostByContentAsync(string content)
+        {
+            var dtos = await GetAllAsync();
+            return dtos.
+                FirstOrDefault(p => p.Content.Equals(content));
+        }
+
+        public async Task<Post?> GetPostByCreatedAtAsync(long createdAt)
+        {
+            var dtos = await GetAllAsync();
+            return dtos.
+                FirstOrDefault(p => p.CreatedAt.Ticks == createdAt);
+        }
+
+        public async Task<int> CountByDateAsync(DateTime date)
+        {
+            var dtos = await GetAllAsync();
+            return dtos.Count(p => p.CreatedAt.Date == date.Date);
+        }
+
+        public async Task<IEnumerable<Post>> GetInPeriodAsync(DateTime startDate, DateTime endDate)
+        {
+            var dtos = await GetAllAsync();
+            return dtos.Where(p => p.CreatedAt >= startDate && p.CreatedAt <= endDate);
         }
     }
 }
