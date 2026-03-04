@@ -25,35 +25,35 @@ namespace BlogWpf
         protected override async void OnStartup(StartupEventArgs e)
         {
             _host = Host.CreateDefaultBuilder()
-         .ConfigureAppConfiguration((context, config) =>
-         {
-             config.SetBasePath(Directory.GetCurrentDirectory())
-                   .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
-         })
-        .ConfigureServices((context, services) =>
-        {
-            // ===== CONFIGURAZIONE FIREBASE =====
-            services.Configure<FirebaseSettings>(
-                context.Configuration.GetSection("Firebase"));
-
-
-            // ===== INFRASTRUCTURE LAYER =====
-            //Registra l'interfaccia IBlogRepository
-            services.AddSingleton<IBlogRepository>(sp =>
+             .ConfigureAppConfiguration((context, config) =>
+             {
+                 config.SetBasePath(Directory.GetCurrentDirectory())
+                       .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true);
+             })
+            .ConfigureServices((context, services) =>
             {
-                // Recupera le impostazioni di Firebase dal DI container e crea un'istanza di FirebaseRepository
-                var settings = sp.GetRequiredService<IOptions<FirebaseSettings>>().Value;
-                return new FirebaseRepository(settings.DatabaseUrl);
-            });
+                // ===== CONFIGURAZIONE FIREBASE =====
+                services.Configure<FirebaseSettings>(
+                    context.Configuration.GetSection("Firebase"));
 
-            // ===== APPLICATION LAYER =====
-            services.AddSingleton<IBlogService, BlogService>();
 
-            // ===== PRESENTATION LAYER (WPF) =====
-            services.AddSingleton<HomeViewModel>();
-            services.AddSingleton<MainWindow>();
+                // ===== INFRASTRUCTURE LAYER =====
+                //Registra l'interfaccia IBlogRepository
+                services.AddSingleton<IBlogRepository>(sp =>
+                {
+                    // Recupera le impostazioni di Firebase dal DI container e crea un'istanza di FirebaseRepository
+                    var settings = sp.GetRequiredService<IOptions<FirebaseSettings>>().Value;
+                    return new FirebaseRepository(settings.DatabaseUrl);
+                });
 
-        })
+                // ===== APPLICATION LAYER =====
+                services.AddSingleton<IBlogService, BlogService>();
+
+                // ===== PRESENTATION LAYER (WPF) =====
+                services.AddSingleton<HomeViewModel>();
+                services.AddSingleton<MainWindow>();
+
+            })
         .Build();
 
             await _host.StartAsync();

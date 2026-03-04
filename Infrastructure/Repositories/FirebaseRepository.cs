@@ -9,33 +9,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace Infrastructure.Repositories
 {
     public class FirebaseRepository : IBlogRepository
     {
         //proprietà dellla nostra repo
-        private readonly FirebaseClient _firebaseClient;
+        private readonly FirebaseClient _firebaseClient; //ci permette di connetterci al nostro database
         public const string ArticlesNode = "articles";
 
         //costruttore che inizializza il client firebase con l'URL del database
         public FirebaseRepository(string firebaseUrl)
         {
-            //gli diciamo a quale databse fa riferimento
+            //gli diciamo a quale database fa riferimento
             _firebaseClient = new FirebaseClient(firebaseUrl);
         }
 
-        public Task DeleteAsync(string id)
+        public async Task DeleteAsync(string id)
         {
-            throw new NotImplementedException();
+            await _firebaseClient
+                .Child(ArticlesNode)
+                .Child(id)
+                .DeleteAsync();
         }
 
         public async Task<IEnumerable<Post>> GetAllAsync()
         {
             // Recupera tutti i nodi sotto "articles" e li mappa in BlogPostPersistenceDto
             var dtos = await _firebaseClient
-                .Child(ArticlesNode)
-                .OnceAsync<PostPersistenceDto>();
+                .Child(ArticlesNode) //gli dico il nodo che fa da root
+                .OnceAsync<PostPersistenceDto>(); //ritorna tutti i figli di articlesNode
 
             // Mappa i DTO in entità Post, ordina per CreatedAt in ordine decrescente e restituisce la lista
             return dtos
@@ -44,19 +48,32 @@ namespace Infrastructure.Repositories
                 .ToList();
         }
 
-        public Task<Post?> GetByIdAsync(string id)
+        public async Task<Post?> GetByIdAsync(string id)
         {
-            throw new NotImplementedException();
+            var dto = await _firebaseClient
+                .Child(ArticlesNode)
+                .Child(id)
+                .OnceSingleAsync<PostPersistenceDto>();
+
+            if(dto == null)
+                return null;
+            return dto.ToEntity();
         }
 
-        public Task SaveAsync(Post article)
+        public async Task SaveAsync(Post article)
         {
-            throw new NotImplementedException();
+            await _firebaseClient
+                .Child(ArticlesNode)
+                .Child(article.Id.ToString())
+                .PutAsync(article.ToPersistenceDto());
         }
 
-        public Task UpdateAsync(Post article)
+        public async Task UpdateAsync(Post article)
         {
-            throw new NotImplementedException();
+            await _firebaseClient
+                .Child(ArticlesNode)
+                .Child(article.Id.ToString())
+                .PutAsync(article.ToPersistenceDto());
         }
     }
 }
