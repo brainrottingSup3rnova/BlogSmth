@@ -7,21 +7,85 @@
         mc:Ignorable="d"
         Title="SeePostWindow" Height="460" Width="460"
         Background="#F1F8F4">
-    <StackPanel>
-        <Label Content="Post Details" FontSize="30" HorizontalAlignment="Center" Margin="10" FontFamily="Arial Rounded MT Bold"/>
-        <StackPanel Margin="10">
-            <Label Content="Titolo" FontFamily="Arial Rounded MT Bold" FontSize="20"/>
-            <TextBox Text="{Binding EditedTitle}" FontSize="20" FontWeight="Bold" Margin="0,0,0,10"/>
-            <Label Content="Contenuto" FontFamily="Arial Rounded MT Bold" FontSize="20"/>
-            <TextBox Text="{Binding EditedContent}" TextWrapping="Wrap" Margin="0,0,0,10" Height="50"/>
-            <TextBlock Text="{Binding Post.CreatedAt, StringFormat='Created At: {0:dd/MM/yyyy HH:mm}'}" FontStyle="Italic" FontFamily="Arial Rounded MT Bold"/>
-        </StackPanel>
+    <Window.Resources>
+        <Style x:Key="ButtonDeleteStyle" TargetType="Button">
+            <Setter Property="Background" Value="#C62828"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                            CornerRadius="8" 
+                            BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonUpdateStyle" TargetType="Button">
+            <Setter Property="Background" Value="#7FBF9E"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                            CornerRadius="8" 
+                            BorderThickness="0">    
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid Margin="30">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
         <StackPanel
-            Orientation="Vertical"
-            >
-            <Button Content="Save" Margin="0" Height="35" Width="300" Padding="5" Command="{Binding UpdatePostCommand}" Click="Save_Click" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
-            <Button Content="Delete" Margin="5" Height="35" Width="300" Padding="5" Command="{Binding DeletePostCommand}" Click="Delete_Click" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
-            <Button Content="Close" Margin="5" Click="CloseWindow_Click" Height="35" Width="300" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
+            Orientation="Vertical">
+            <TextBlock
+                Text="See post"
+                FontWeight="Bold"
+                FontSize="30"
+                HorizontalAlignment="Left"/>
+            <TextBlock
+                Text="Title"
+                FontWeight="Bold"
+                FontSize="15"
+                HorizontalAlignment="Left"/>
+            <TextBox
+                Text="{Binding EditedTitle}"/>
+            <TextBlock
+                Text="Content"
+                FontWeight="Bold"
+                FontSize="15"
+                HorizontalAlignment="Left"/>
+            <TextBox
+                Text="{Binding EditedContent}"/>
+            <Button
+                Content="Update"
+                Style="{StaticResource ButtonUpdateStyle}"
+                Command="{Binding UpdatePostCommand}"
+                Click="Save_Click"/>
+            <Button
+                Content="Delete"
+                Style="{StaticResource ButtonDeleteStyle}"
+                Command="{Binding DeletePostCommand}"
+                Click="Delete_Click"/>
         </StackPanel>
-    </StackPanel>   
+    </Grid>
 </Window>

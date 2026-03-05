@@ -63,6 +63,16 @@
                        Foreground="#4F8F6B" 
                        FontWeight="Medium"
                        Margin="2,5,0,0"/>
+            <TextBox Height="30"
+                     Width="500"
+                     HorizontalAlignment="Left"
+                     BorderThickness="0">
+                <TextBox.Resources>
+                    <Style TargetType="Border">
+                        <Setter Property="CornerRadius" Value="10"/>
+                    </Style>
+                </TextBox.Resources>
+            </TextBox>
         </StackPanel>
 
         <Grid Grid.Row="1">
@@ -120,9 +130,12 @@
                                                        Margin="0,5,0,0"/>
                                         </StackPanel>
 
-                                        <TextBlock Grid.Column="1" Text="→" 
-                                                   FontSize="20" VerticalAlignment="Center" 
-                                                   Foreground="#BDC3C7" Margin="10,0"/>
+                                        <TextBlock Grid.Column="1" 
+                                                   Text="→" 
+                                                   FontSize="20" 
+                                                   VerticalAlignment="Center" 
+                                                   Foreground="#BDC3C7"
+                                                   Margin="10,0"/>
                                     </Grid>
                                 </Border>
                             </DataTemplate>

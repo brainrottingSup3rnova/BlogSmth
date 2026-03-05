@@ -7,15 +7,61 @@
         mc:Ignorable="d"
         Title="CreatePostView" Height="400" Width="450"
         Background="#F1F8F4 ">
-    <StackPanel
-        Orientation="Vertical">
-        <Label Content="Create New Post" FontSize="30" HorizontalAlignment="Center" Margin="10" FontFamily="Arial Rounded MT Bold"/>
-        <TextBlock Text="Title:" Margin="10,0,10,5" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
-        <TextBox Text="{Binding Title}" Margin="10,0,10,10" Height="30"/>
-        <TextBlock Text="Content:" Margin="10,0,10,5" FontSize="20" FontFamily="Arial Rounded MT Bold"/>
-        <TextBox Text="{Binding Content}" Margin="10,0,10,10" Height="100"/>
-        <Button Content="Create" Margin="20" Height="50" Width="200" HorizontalAlignment="Center" Command="{Binding CreatePostCommand}" Click="Button_Click" Background="#CDE8D7" FontSize="20" FontFamily="Arial Rounded MT Bold">
-            
-        </Button>
-    </StackPanel>
+    <Window.Resources>
+        <Style x:Key="CreateButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="#4F8F6B"/>
+            <Setter Property="Foreground" Value="White"/>
+            <Setter Property="FontSize" Value="14"/>
+            <Setter Property="FontWeight" Value="SemiBold"/>
+            <Setter Property="Padding" Value="20,10"/>
+            <Setter Property="Margin" Value="5"/>
+            <Setter Property="Cursor" Value="Hand"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border Background="{TemplateBinding Background}" 
+                                CornerRadius="8" 
+                                BorderThickness="0">
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    
+    <Grid Margin="30">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+        <StackPanel
+            Orientation="Vertical"
+            Grid.Row="0">
+            <TextBlock Text="Create New Post" 
+                       FontSize="30" 
+                       FontWeight="Bold" 
+                       Foreground="#2D3436"
+                       HorizontalAlignment="Left"/>
+            <TextBlock Text="Title" 
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="#2D3436"
+                       HorizontalAlignment="Left"/>
+            <TextBox Text="{Binding Title}" FontSize="15" Margin="0,0,0,10"/>
+            <TextBlock Text="Content" 
+                       FontSize="15" 
+                       FontWeight="Bold" 
+                       Foreground="#2D3436"
+                       HorizontalAlignment="Left"/> 
+            <TextBox Text="{Binding Content}" FontSize="15" Margin="0,0,0,10"/>
+            <Button Content="+ Create Post" 
+                    Style="{StaticResource CreateButtonStyle}" 
+                    Command="{Binding CreatePostCommand}"
+                    Width="150" 
+                    HorizontalAlignment="Left"
+                    Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
 </Window>
