@@ -57,7 +57,7 @@ namespace BlogWpf.ViewModels
                     Articles.Add(article);
                 }
 
-                StatusMessage = $"Caricati {Articles.Count} articoli";
+                StatusMessage = $"Loaded {Articles.Count} articles";
             }
             catch (Exception ex)
             {
@@ -69,7 +69,7 @@ namespace BlogWpf.ViewModels
         private async Task CreateArticleAsync()
         {
             CreatePostView createPostView = new CreatePostView(new CreatePostViewModel(_blogService));
-            createPostView.ShowDialog();    
+            createPostView.ShowDialog();
         }
 
         partial void OnSelectedArticleChanged(PostReadDto? post)

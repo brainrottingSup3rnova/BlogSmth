@@ -75,7 +75,9 @@
                 FontSize="15"
                 HorizontalAlignment="Left"/>
             <TextBox
-                Text="{Binding EditedContent}"/>
+                Text="{Binding EditedContent}"
+                MaxHeight="200"
+                TextWrapping="Wrap"/>
             <Button
                 Content="Update"
                 Style="{StaticResource ButtonUpdateStyle}"
