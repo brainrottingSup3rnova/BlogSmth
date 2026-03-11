@@ -65,7 +65,7 @@
                        Margin="2,5,0,0"/>
         </StackPanel>
         <Grid Grid.Row="1">
-            <Border Background="White" CornerRadius="15">
+            <Border Background="White" CornerRadius="15" Width="500" HorizontalAlignment="Right">
                 <Border.Effect>
                     <DropShadowEffect BlurRadius="15" Direction="-90" RenderingBias="Quality" ShadowDepth="2" Opacity="0.1"/>
                 </Border.Effect>
@@ -79,7 +79,7 @@
                     <Button Content="↻ Refresh Articles" 
                             Command="{Binding LoadArticlesCommand}"
                             Style="{StaticResource ModernButtonStyle}"
-                            HorizontalAlignment="Right"
+                            HorizontalAlignment="Left"
                             Margin="15"
                             FontSize="12"
                             Height="20"
@@ -144,6 +144,24 @@
                     </ListBox>
                 </Grid>
             </Border>
+            <Grid Grid.Row="1">
+                <Border Background="White" CornerRadius="15" Width="300" HorizontalAlignment="Left">
+                    <Border.Effect>
+                        <DropShadowEffect BlurRadius="15" Direction="-90" RenderingBias="Quality" ShadowDepth="2" Opacity="0.1"/>
+                    </Border.Effect>
+                    <Grid>
+                        <TextBlock 
+                            Text="Filters and Research"
+                            FontSize="20" 
+                            FontStyle="Normal" 
+                            FontWeight="Bold"
+                            Foreground="Black" 
+                            HorizontalAlignment="Left" 
+                            VerticalAlignment="Top" 
+                            Margin="10,0,0,0"/>
+                    </Grid>
+                </Border>
+            </Grid>
         </Grid>
 
         <StackPanel Grid.Row="2" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,20,0,0">
