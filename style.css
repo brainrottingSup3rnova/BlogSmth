@@ -1,0 +1,13 @@
+* {
+    background-color: #F4F7F6;
+}
+
+header {
+    font-size: 30px;
+}
+
+.col-4 {
+    border-radius: 10%;
+    border: 1px solid white;
+    background: white;
+}
