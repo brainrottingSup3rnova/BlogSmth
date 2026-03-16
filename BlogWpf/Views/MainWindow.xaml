@@ -158,7 +158,14 @@
                             Foreground="Black" 
                             HorizontalAlignment="Left" 
                             VerticalAlignment="Top" 
-                            Margin="10,0,0,0"/>
+                            Margin="10,5,0,0"/>
+                        <TextBlock Text="(Not implemented yet)" 
+                                   FontSize="12" 
+                                   FontStyle="Italic" 
+                                   Foreground="#95A5A6" 
+                                   HorizontalAlignment="Left" 
+                                   VerticalAlignment="Top" 
+                                   Margin="10,30,0,0"/>
                     </Grid>
                 </Border>
             </Grid>
