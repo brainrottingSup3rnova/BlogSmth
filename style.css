@@ -6,8 +6,12 @@ header {
     font-size: 30px;
 }
 
-.col-4 {
+.col-6 {
     border-radius: 10%;
-    border: 1px solid white;
-    background: white;
+    border: 10px solid white;
+    height: 400px;
+}
+
+section {
+    padding: 30px;
 }
