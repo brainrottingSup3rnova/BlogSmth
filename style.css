@@ -6,12 +6,18 @@ header {
     font-size: 30px;
 }
 
-.col-6 {
-    border-radius: 10%;
-    border: 10px solid white;
-    height: 400px;
+.col-4 {
+  height: 500px;
+}
+
+h2 {
+    background-color: #ffffff;
+    padding-left: 10px;
+    padding-top: 10px;
 }
 
 section {
-    padding: 30px;
+    padding: 40px;
+    background-color: #ffffff;
+    gap: 1px;
 }

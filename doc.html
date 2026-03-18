@@ -16,48 +16,113 @@
     <main>
         <div class="container">
             <div class="row">
-                <div class="col-6">
-                    <h2>
-                        Filters And Research
-                    </h2>
-                    <form>
-                        <section>
-                            <label>
-                                Title
-                            </label>
-                            <input type="text"/>
-                            <label>
-                                Content
-                            </label>
-                            <input type="text"/>
-                            <label>
-                                Date
-                            </label>
-                            <input type="date">
-                            <label>
-                                From date to date
-                            </label>
-                            <input type="date"/>
-                            <input type="date">
-                        </section>
-                    </form>
+                <div class="col-4">
+                    <div class="m-2 p-1 border rounded">
+                        <h2>
+                            Filters And Research
+                        </h2>
+                        <form>
+                            <div class="mb-1">
+                                <label for="titleSearchInput" class="form-label">
+                                    Title
+                                </label>
+                                <input type="text" id="titleSearchInput" class="form-control"/>
+                                <button class="btn btn-primary mt-2">
+                                    Search
+                                </button>
+                            </div>
+                            <div class="mb-1">
+                                <label for="contentSearchInput" class="form-label">
+                                    Content
+                                </label>
+                                <input type="text" id="contentSearchInput" class="form-control"/>
+                                <button class="btn btn-primary mt-2">
+                                    Search
+                                </button>
+                            </div>
+                            <div class="mb-1>
+                                <label for="dateSearchInput" class="form-label">
+                                    Date
+                                </label>
+                                <input type="date" id="dateSearchInput" class="form-control">
+                                <button class="btn btn-primary mt-2">
+                                    Search
+                                </button>
+                            </div>
+                            <div class="mb-1">
+                                <label for="dateToDateSearchInput" class="form-label">
+                                    From date to date
+                                </label>
+                                <input type="date" id="dateToDateSearchInput" class="form-control"/>
+                                <input type="date" id="dateToDateSearchInput" class="form-control mt-2">
+                                <button class="btn btn-primary mt-2">
+                                    Search
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-                <div class="col-6">
-                    <button>
-                        Refresh Articles
-                    </button>
+                <div class="col-4">
+                    <div class="m-2 p-1 border rounded">
+                        <h2>
+                            Post details
+                        </h2>
+                        <form>
+                            <div class="mb-3">
+                                <label class="form-label" for="inputTitle">
+                                    Title:
+                                </label>
+                                <input type="text" class="form-control" id="inputTitle"/>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="inputContent">
+                                    Content:
+                                </label>
+                                <input type="text" class="form-control" id="inputContent"/>
+                            </div>
+                            <div class="mb-3">
+                                <button class="btn btn-success">
+                                    Create new
+                                </button>
+                                <button class="btn btn-info">
+                                    Update
+                                </button>
+                                <button class="btn btn-danger">
+                                    Delete
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="m-2 p-1 border rounded">
+                        <h2>
+                            Post list
+                        </h2>
+                        <div class="mb-2">
+                            <button class="btn btn-success m-2">
+                                Refresh Articles
+                            </button>
+                            <div class="list-group">
+                                <button type="button" class="list-group-item list-group-item-action">
+                                    First article
+                                </button>
+                                <button type="button" class="list-group-item list-group-item-action">
+                                    Second article
+                                </button>
+                                <button type="button" class="list-group-item list-group-item-action">
+                                    Third article
+                                </button>
+                                <button type="button" class="list-group-item list-group-item-action">
+                                    Fourth article
+                                </button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </main>
-    <footer>
-        <button>
-            Leave
-        </button>
-        <button>
-            Create New Article
-        </button>
-    </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
