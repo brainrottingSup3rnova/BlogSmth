@@ -1,23 +1,27 @@
-* {
+body {
     background-color: #F4F7F6;
 }
 
 header {
-    font-size: 30px;
+    font-size: large;
 }
 
-.col-4 {
-  height: 500px;
+h1 {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-h2 {
-    background-color: #ffffff;
-    padding-left: 10px;
-    padding-top: 10px;
+.m-2 {
+    background-color: #d6ebe4;
 }
 
-section {
-    padding: 40px;
-    background-color: #ffffff;
-    gap: 1px;
+footer {
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.btn-primary {
+    background-color:rgb(160, 180, 114) !important;
+}
+
+.nav {
+    background-color: #d6ebe4 !important;
 }
