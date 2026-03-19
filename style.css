@@ -2,10 +2,6 @@ body {
     background-color: #F4F7F6;
 }
 
-header {
-    font-size: large;
-}
-
 h1 {
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
@@ -19,9 +15,24 @@ footer {
 }
 
 .btn-primary {
-    background-color:rgb(160, 180, 114) !important;
+    background-color:rgb(114, 180, 157) !important;
+    border-color: rgb(114, 180, 157) !important;
 }
 
 .nav {
     background-color: #d6ebe4 !important;
+}
+
+.btn-secondary {
+    background-color: rgb(114, 180, 157) !important;
+    border-color: rgb(114, 180, 157) !important;
+}
+
+.btn-danger {
+    background-color: rgb(194, 90, 90) !important;
+    border-color: rgb(194, 90, 90) !important;
+}
+
+.list-group {
+    max-height: 100rem;
 }
