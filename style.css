@@ -3,7 +3,7 @@ body {
 }
 
 h1 {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 700 !important;
 }
 
 .m-2 {
@@ -35,4 +35,19 @@ footer {
 
 .list-group {
     max-height: 100rem;
+}
+
+.btn-primary:hover {
+    background-color:rgb(79, 128, 111) !important;
+    border-color: rgb(79, 128, 111) !important
+}
+
+.btn-danger:hover {
+    background-color: rgb(155, 73, 73) !important;
+    border-color: rgb(155, 73, 73) !important;
+}
+
+.btn-secondary:hover {
+    background-color: rgb(100, 158, 138) !important;
+    border-color: rgb(100, 158, 138)  !important;
 }
