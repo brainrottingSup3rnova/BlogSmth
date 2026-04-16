@@ -11,17 +11,19 @@ init();
 
 
 function renderArticleDetail(article) {
-  document.getElementById('content-placeholder').classList.add('d-none');
-  document.getElementById('article-detail').classList.remove('d-none');
-  document.getElementById('article-title').textContent = article.Title || 'Senza titolo';
-  document.getElementById('article-date').textContent  = article.formattedDate();
-  document.getElementById('article-body').textContent  = article.Content || '';
+  document.getElementById('inputTitle').value = article.Title || 'Senza titolo';
+  document.getElementById('inputContent').textContent  = article.Content || '';
 }
 
 
 async function init() {
-  const listEl    = document.getElementById('article-list');
+  const listEl    = document.getElementById('postLists');
+  const btnRefresh = document.getElementById('btnRefresh');
   
+  btnRefresh.addEventListener('click', () => {
+    init();
+  })
+
   try {
     const articles = await articleService.getAll();
     articles.forEach((article, index) => {
