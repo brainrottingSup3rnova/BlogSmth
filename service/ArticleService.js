@@ -5,7 +5,7 @@ export class ArticleService {
         this._repository = repository;
     }
 
-    async GetAll() {
+    async getAll() {
         const articles = await this._repository.getAll();
         return articles.sort((a,b) => (b.Timestamp ?? 0) - (a.Timestamp ?? 0));
     }

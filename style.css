@@ -34,7 +34,12 @@ footer {
 }
 
 .list-group {
-    max-height: 100rem;
+    max-height: 50vh;
+}
+
+.active {
+    background-color: rgb(114, 180, 157) !important;
+    border-color: rgb(114, 180, 157) !important;
 }
 
 .btn-primary:hover {

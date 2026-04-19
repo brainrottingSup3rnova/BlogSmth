@@ -2,24 +2,20 @@
 //linguaggio procedurale
 
 import { ArticleService } from '../service/ArticleService.js';
+import { ArticleFirebaseRepository } from '../repository/ArticleFirebaseRepository.js';
 
 
-const articleService = new ArticleService();
-
-
-init();
-
+const articleService = new ArticleService(new ArticleFirebaseRepository());
 
 function renderArticleDetail(article) {
   document.getElementById('inputTitle').value = article.Title || 'Senza titolo';
-  document.getElementById('inputContent').textContent  = article.Content || '';
+  document.getElementById('inputContent').textContent = article.Content || '';
 }
 
-
 async function init() {
-  const listEl    = document.getElementById('postLists');
+  const listEl = document.getElementById('postLists');
   const btnRefresh = document.getElementById('btnRefresh');
-  
+
   btnRefresh.addEventListener('click', () => {
     init();
   })
@@ -28,7 +24,7 @@ async function init() {
     const articles = await articleService.getAll();
     articles.forEach((article, index) => {
       const btn = document.createElement('button');
-      btn.type      = 'button';
+      btn.type = 'button';
       btn.className = 'list-group-item list-group-item-action text-start py-2 px-2';
       btn.innerHTML = `
         <div class="fw-medium small">${article.Title || 'Senza titolo'}</div>
@@ -43,6 +39,8 @@ async function init() {
       if (index === 0) btn.click();
     });
   } catch (err) {
-
+    console.error('Errore nel caricamento degli articoli:', err);
   }
 }
+
+init();
