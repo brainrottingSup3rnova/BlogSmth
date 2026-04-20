@@ -7,6 +7,10 @@ import { ArticleFirebaseRepository } from '../repository/ArticleFirebaseReposito
 
 const articleService = new ArticleService(new ArticleFirebaseRepository());
 
+const btnRefresh = document.getElementById('btnRefresh');
+const btnSave = document.getElementById('btnSave');
+const btnDelete = document.getElementById('btnDelete');
+
 function renderArticleDetail(article) {
   document.getElementById('inputTitle').value = article.Title || 'Senza titolo';
   document.getElementById('inputContent').textContent = article.Content || '';
@@ -14,7 +18,6 @@ function renderArticleDetail(article) {
 
 async function init() {
   const listEl = document.getElementById('postLists');
-  const btnRefresh = document.getElementById('btnRefresh');
 
   try {
     const articles = await articleService.getAll();
@@ -42,13 +45,14 @@ async function init() {
 init();
 
 btnRefresh.addEventListener('click', () => {
-    init();
+  init();
 })
 
-/*
+
 btnSave.addEventListener('click', () => {
-  const newArticle {
-
-  }
-})
-  */
+  const newArticle = {
+    Title: document.getElementById('inputTitle').value,
+    Content: document.getElementById('inputContent').textContent
+  };
+  articleService.save(newArticle);
+});
