@@ -14,5 +14,9 @@ export class ArticleService {
         if(!id.trim()) throw new Error('Id invalid');
         return this._repository.getById(id);
     }
+
+    async save(article) {
+        
+    }
 }
 

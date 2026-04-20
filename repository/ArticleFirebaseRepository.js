@@ -25,4 +25,13 @@ export class ArticleFirebaseRepository extends IRepository {
         if (!data) throw new Error(`Article with id "${id}" not found idiot`);
         return new Article(data);
     }
+
+    async save(article) {
+    const res = await fetch(`${DB_BASE_URL}/articles/${article.Id}.json`, {
+      method:  'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body:    JSON.stringify(article.toJSON()),
+    });
+    if (!res.ok) throw new Error(`Errore HTTP ${res.status}`);
+  }
 }

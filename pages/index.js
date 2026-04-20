@@ -16,10 +16,6 @@ async function init() {
   const listEl = document.getElementById('postLists');
   const btnRefresh = document.getElementById('btnRefresh');
 
-  btnRefresh.addEventListener('click', () => {
-    init();
-  })
-
   try {
     const articles = await articleService.getAll();
     articles.forEach((article, index) => {
@@ -44,3 +40,15 @@ async function init() {
 }
 
 init();
+
+btnRefresh.addEventListener('click', () => {
+    init();
+})
+
+/*
+btnSave.addEventListener('click', () => {
+  const newArticle {
+
+  }
+})
+  */
