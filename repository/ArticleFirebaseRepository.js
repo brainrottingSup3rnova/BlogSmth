@@ -14,7 +14,16 @@ export class ArticleFirebaseRepository extends IRepository {
 
     const data = await res.json();
     if (!data) return []; //controllo se il json è vuoto
+
+    /*
     return Object.values(data).map(raw => new Article(raw));
+    */
+
+    return Object.keys(data).map(id => {
+      const item = data[id];
+      const timestamp = item.Timestamp ?? item.TimeStamp ?? item.timestamp;
+      return new Article({ Id: id, Title: item.Title ?? '', Content: item.Content ?? '', Timestamp: timestamp });
+    });
   }
 
   async getById(id) {
@@ -22,8 +31,9 @@ export class ArticleFirebaseRepository extends IRepository {
     if (!res.ok) throw new Error(`HTTP error ${res.status}`);
 
     const data = await res.json();
-    if (!data) throw new Error(`Article with id "${id}" not found idiot`);
-    return new Article(data);
+    if (!data) throw new Error(`Article with id "${id}" not found`);
+    const timestamp = data.Timestamp ?? data.TimeStamp ?? data.timestamp;
+    return new Article({ Id: id, Title: data.Title ?? '', Content: data.Content ?? '', Timestamp: timestamp });
   }
 
   async save(article) {

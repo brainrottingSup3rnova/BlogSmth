@@ -10,6 +10,7 @@ const articleService = new ArticleService(new ArticleFirebaseRepository());
 const btnRefresh = document.getElementById('btnRefresh');
 const btnSave = document.getElementById('btnSave');
 const btnDelete = document.getElementById('btnDelete');
+const listEl = document.getElementById('postLists');
 
 function renderArticleDetail(article) {
   document.getElementById('inputTitle').value = article.Title || 'Senza titolo';
@@ -17,8 +18,6 @@ function renderArticleDetail(article) {
 }
 
 async function init() {
-  const listEl = document.getElementById('postLists');
-
   try {
     const articles = await articleService.getAll();
     articles.forEach((article, index) => {
@@ -45,11 +44,13 @@ async function init() {
 init();
 
 btnRefresh.addEventListener('click', () => {
+  listEl.innerHTML = '';
   init();
-})
+});
 
 
-btnSave.addEventListener('click', () => {
+btnSave.addEventListener('click', (e) => {
+  e.preventDefault();
   const newArticle = {
     Title: document.getElementById('inputTitle').value,
     Content: document.getElementById('inputContent').textContent
