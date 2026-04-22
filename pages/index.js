@@ -10,11 +10,12 @@ const articleService = new ArticleService(new ArticleFirebaseRepository());
 const btnRefresh = document.getElementById('btnRefresh');
 const btnSave = document.getElementById('btnSave');
 const btnDelete = document.getElementById('btnDelete');
+const btnClear = document.getElementById('btnClear');
 const listEl = document.getElementById('postLists');
 
 function renderArticleDetail(article) {
   document.getElementById('inputTitle').value = article.Title || 'Senza titolo';
-  document.getElementById('inputContent').textContent = article.Content || '';
+  document.getElementById('inputContent').value = article.Content || '';
 }
 
 async function init() {
@@ -24,6 +25,7 @@ async function init() {
       const btn = document.createElement('button');
       btn.type = 'button';
       btn.className = 'list-group-item list-group-item-action text-start py-2 px-2';
+      btn.dataset.id = article.Id;
       btn.innerHTML = `
         <div class="fw-medium small">${article.Title || 'Senza titolo'}</div>
         <div class="article-date mt-1">${article.formattedDate()}</div>
@@ -43,17 +45,30 @@ async function init() {
 
 init();
 
-btnRefresh.addEventListener('click', () => {
+btnRefresh.addEventListener('click', async () => {
   listEl.innerHTML = '';
-  init();
+  await init();
 });
 
+btnClear.addEventListener('click', (e) => {
+  e.preventDefault();
+  document.getElementById('inputTitle').value ='';
+  document.getElementById('inputContent').value = '';
+});
 
-btnSave.addEventListener('click', (e) => {
+btnSave.addEventListener('click', async (e) => {
   e.preventDefault();
   const newArticle = {
     Title: document.getElementById('inputTitle').value,
-    Content: document.getElementById('inputContent').textContent
+    Content: document.getElementById('inputContent').value
   };
-  articleService.save(newArticle);
+  await articleService.save(newArticle);
+  await init();
+});
+
+btnDelete.addEventListener('click', async (e) => {
+  e.preventDefault();
+  const articleToDelete = listEl.querySelector(".list-group-item .active");
+  await articleService.delete(articleToDelete.dataset.id);
+  await init();
 });

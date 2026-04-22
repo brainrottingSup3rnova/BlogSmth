@@ -44,4 +44,12 @@ export class ArticleFirebaseRepository extends IRepository {
     });
     if (!res.ok) throw new Error(`Errore HTTP ${res.status}`);
   }
+
+  async delete(id) {
+    const res = await fetch(`${DB_BASE_URL}/articles/${id}.json`, {
+      method: 'DELETE',
+    });
+    if (!res.ok) throw new Error(`Errore HTTP ${res.status}`);
+  }
+
 }

@@ -15,7 +15,7 @@ export class ArticleService {
         return this._repository.getById(id);
     }
 
-    async save(article) {
+    async save(article) {     
         if (!article.Title.trim()) throw new Error('Title invalid');
         if (!article.Content.trim()) throw new Error('Content invalid');
         const articleToSave = new Article({
@@ -25,6 +25,11 @@ export class ArticleService {
             Timestamp: Math.floor(Date.now() / 1000)
         });
         return this._repository.save(articleToSave);
+    }
+    
+    async delete(id) {
+        if(!id?.trim()) throw new Error('Invalid id, just like you!')
+        return this._repository.delete(id);
     }
 }
 
