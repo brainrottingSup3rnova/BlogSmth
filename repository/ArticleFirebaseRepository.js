@@ -52,4 +52,12 @@ export class ArticleFirebaseRepository extends IRepository {
     if (!res.ok) throw new Error(`Errore HTTP ${res.status}`);
   }
 
+  async update(article) {
+    const res = await fetch(`${DB_BASE_URL}/articles/${article.Id}.json`, {
+      method: 'PATCH',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(article.toJSON())
+    }); 
+    if (!res.ok) throw new Error(`Errore HTTP ${res.status}`);
+  }
 }

@@ -16,8 +16,8 @@ export class ArticleService {
     }
 
     async save(article) {     
-        if (!article.Title.trim()) throw new Error('Title invalid');
-        if (!article.Content.trim()) throw new Error('Content invalid');
+        if (!article.Title.trim()) throw new Error('Title invalid, just like you!');
+        if (!article.Content.trim()) throw new Error('Content invalid, just like you!');
         const articleToSave = new Article({
             Id: Article.generateId(),
             Title: article.Title,
@@ -28,8 +28,21 @@ export class ArticleService {
     }
     
     async delete(id) {
-        if(!id?.trim()) throw new Error('Invalid id, just like you!')
+        if(!id?.trim()) throw new Error('Invalid id, just like you!');
         return this._repository.delete(id);
+    }
+
+    async update(id, article) {
+        if (!article.Title.trim()) throw new Error('Title invalid, just like you!');
+        if (!article.Content.trim()) throw new Error('Content invalid, just like you!');
+        if(!id?.trim()) throw new Error('Invalid id, just like you!');
+        const articleToSave = new Article({
+            Id: id,
+            Title: article.Title,
+            Content: article.Content,
+            Timestamp: Math.floor(Date.now() / 1000)
+        });
+        return this._repository.update(articleToSave);
     }
 }
 

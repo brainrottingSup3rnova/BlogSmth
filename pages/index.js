@@ -11,6 +11,7 @@ const btnRefresh = document.getElementById('btnRefresh');
 const btnSave = document.getElementById('btnSave');
 const btnDelete = document.getElementById('btnDelete');
 const btnClear = document.getElementById('btnClear');
+const btnUpdate = document.getElementById('btnUpdate');
 const listEl = document.getElementById('postLists');
 
 function renderArticleDetail(article) {
@@ -20,6 +21,7 @@ function renderArticleDetail(article) {
 
 async function init() {
   try {
+    listEl.innerHTML = '';
     const articles = await articleService.getAll();
     articles.forEach((article, index) => {
       const btn = document.createElement('button');
@@ -68,7 +70,19 @@ btnSave.addEventListener('click', async (e) => {
 
 btnDelete.addEventListener('click', async (e) => {
   e.preventDefault();
-  const articleToDelete = listEl.querySelector(".list-group-item .active");
+  const articleToDelete = listEl.querySelector(".list-group-item.active");
   await articleService.delete(articleToDelete.dataset.id);
   await init();
+});
+
+btnUpdate.addEventListener('click', async (e) => {
+  e.preventDefault();
+  const idToUpdate = listEl.querySelector(".list-group-item.active").dataset.id;
+
+  const newArticle = {
+    Title: document.getElementById('inputTitle').value,
+    Content: document.getElementById('inputContent').value
+  };
+
+  await articleService.update(idToUpdate,newArticle);
 });
